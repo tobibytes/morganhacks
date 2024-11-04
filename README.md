@@ -1,0 +1,1 @@
+* Run bash ./runscript.sh
