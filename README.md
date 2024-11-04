@@ -1,1 +1,1 @@
-# morganhacks
+* Run bash ./runscript.sh
