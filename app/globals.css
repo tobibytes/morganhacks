@@ -2,20 +2,123 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+    --accent: #8855ff;
+    width: 100vw;
+    height: 100vh;
+    /* overflow: hidden; */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: var(--accent);
+    transform-origin: 0%;
+  }
+  .navbar-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+  }
+  
+  nav {
+    width: 100%;
+    padding: 5px 5px 0;
+    height: 44px;
+    font-size: xx-large;
+    /* position: fixed; */
+  }
+  
+  .navlinks {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 20px 0; /* Adds space between nav and content */
+    user-select: none;
+  }
+  
+  ul,
+  li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+  }
+  
+  ul {
+    display: flex;
+    position: relative;
+    width: 100%;
+  }
+  
+  li {
+    position: relative;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    cursor: pointer;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .underline {
+    position: absolute;
+    bottom: -1px;
+    height: 3px; /* Thickness of the underline */
+    background: var(--accent); /* Customize color */
+    border-radius: 2px;
+  }
+    
+  li.selected {
+    background: #000;
+  }
+  
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background: #fff;
+  }
+  
+  .add-item {
+    width: 30px;
+    height: 30px;
+    background: #eee;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    align-self: center;
+  }
+  
+  .add-item:disabled {
+    opacity: 0.4;
+    cursor: default;
+    pointer-events: none;
+  }
+  
