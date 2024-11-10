@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "./components/navbar/Navbar";
+import NavBar from "@/components/Navbar/Navbar";
+import { NextUIProvider } from "@nextui-org/system";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,14 +26,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    
     <html lang="en">
+      <NextUIProvider>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`} style={ {backgroundImage: "url('assets/space-background.jpg')"} }
-      >
-        <Navbar>
+        className={`w-full h-full ${geistSans.variable} ${geistMono.variable} antialiased`}  style={ {backgroundImage: "url('assets/space-background.jpg')"} }
+        >
+        <NavBar>
+          
         {children}
-        </Navbar>
+        </NavBar>
       </body>
+      </NextUIProvider>
     </html>
   );
 }
