@@ -4,9 +4,11 @@ import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Coffee, Code, Users } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { TypeAnimation } from 'react-type-animation'
 
 export default function HackathonIntro() {
-  const [timeLeft, setTimeLeft] = useState('')
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
 
   useEffect(() => {
     const calculateTimeLeft = () => {
@@ -15,33 +17,79 @@ export default function HackathonIntro() {
       const difference = hackathonDate.getTime() - now.getTime()
 
       if (difference > 0) {
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24))
-        const hours = Math.floor((difference / (1000 * 60 * 60)) % 24)
-        const minutes = Math.floor((difference / 1000 / 60) % 60)
-        setTimeLeft(`${days}d ${hours}h ${minutes}m`)
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60)
+        })
       } else {
-        setTimeLeft('Hackathon has started!')
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 })
       }
     }
 
     calculateTimeLeft()
-    const timer = setInterval(calculateTimeLeft, 60000)
+    const timer = setInterval(calculateTimeLeft, 1000)
 
     return () => clearInterval(timer)
   }, [])
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3
+      }
+    }
+  }
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 100
+      }
+    }
+  }
+
   return (
-    <div className="relative min-h-screen w-full bg-cover bg-center py-12 text-white" style={{backgroundImage: "url('https://i.imgur.com/8BXlXhN.jpg')"}}>
-      <div className="absolute inset-0 bg-purple-900 bg-opacity-70"></div>
-      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div className="relative min-h-screen w-full bg-cover bg-center py-12 text-white">
+      <div className="absolute inset-0 bg-opacity-70"></div>
+      <motion.div
+        className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
         <div className="text-center">
-          <h1 className="mb-4 text-5xl font-extrabold tracking-tight text-blue-400 sm:text-6xl">
-            Morgan Hacks 2024
-          </h1>
-          <p className="mb-8 text-2xl font-medium text-green-300">
-            Where Regular Coders Become Extraordinary Hackers!
-          </p>
-          <div className="mb-8 flex justify-center space-x-4">
+          <motion.div variants={itemVariants} className="mb-4 text-5xl font-extrabold tracking-tight text-blue-400 sm:text-6xl">
+            <TypeAnimation
+              sequence={[
+                'Morgan Hacks 2025',
+              ]}
+              wrapper="h1"
+              speed={50}
+              cursor={false}
+            />
+          </motion.div>
+          <motion.div variants={itemVariants} className="mb-8 text-2xl font-medium text-green-300">
+            <TypeAnimation
+              sequence={[
+                'Where Regular Coders Become Extraordinary Hackers!',
+              ]}
+              wrapper="p"
+              speed={50}
+              cursor={false}
+            />
+          </motion.div>
+          <motion.div 
+            className="mb-8 flex justify-center space-x-4"
+            variants={itemVariants}
+          >
             <Card className="bg-opacity-80 backdrop-blur-sm">
               <CardContent className="flex items-center p-4">
                 <Coffee className="mr-2 h-6 w-6 text-yellow-400" />
@@ -60,20 +108,41 @@ export default function HackathonIntro() {
                 <span className="text-lg font-semibold">10+ Challenges</span>
               </CardContent>
             </Card>
-          </div>
-          <p className="mb-8 text-3xl font-bold text-yellow-300">
-            Countdown: {timeLeft}
-          </p>
-          <div className="flex justify-center space-x-4">
-            <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700">
+          </motion.div>
+          <motion.div 
+            className="mb-8 text-3xl font-bold text-yellow-300"
+            variants={itemVariants}
+          >
+            <p className="mb-2">Countdown:</p>
+            <div className="flex justify-center space-x-4">
+              {Object.entries(timeLeft).map(([unit, value]) => (
+                <div key={unit} className="flex flex-col items-center">
+                  <span className="text-4xl">{value}</span>
+                  <span className="text-sm">{unit}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+          <motion.div 
+            className="flex justify-center space-x-4"
+            variants={itemVariants}
+          >
+            <Button 
+              size="lg" 
+              className="bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300"
+            >
               Register Now
             </Button>
-            <Button size="lg" variant="outline" className="border-green-400 text-green-400 hover:bg-green-400 hover:text-white">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-green-400 text-green-400 hover:bg-green-400 hover:text-white transition-all duration-300"
+            >
               Learn More
             </Button>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

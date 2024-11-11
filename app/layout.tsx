@@ -32,9 +32,12 @@ export default function RootLayout({
       <body
         className={`w-full h-full ${geistSans.variable} ${geistMono.variable} antialiased`}  style={ {backgroundImage: "url('assets/space-background.jpg')"} }
         >
+
         <NavBar>
-          
+          <div className="flex flex-col">
+
         {children}
+          </div>
         </NavBar>
       </body>
       </NextUIProvider>
