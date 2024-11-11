@@ -1,10 +1,10 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from "@nextui-org/react";
 import { usePathname, useRouter } from "next/navigation";
-// import { AcmeLogo } from "./AcmeLogo.jsx";
 import { navLinks } from "./navLinks";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export default function NavBar({ children }: Readonly<{
   children: React.ReactNode;
@@ -14,73 +14,92 @@ export default function NavBar({ children }: Readonly<{
   const [selectedNavLink, setSelectedNavLink] = useState(path.slice(1));
   const { scrollYProgress } = useScroll();
   const [underlineStyles, setUnderlineStyles] = useState({ width: 0, left: 0 })
-  const navRef = useRef<HTMLDivElement | null>(null)
-  console.log(path.slice(1))
-
+  const [isOpen, setIsOpen] = useState(false)
+  const [activeLink, setActiveLink] = useState('Home')
 
   useEffect(() => {
-    const selectedElement = navRef.current?.querySelector(".selected") as HTMLElement | null
-    if (selectedElement) {
-      const { offsetWidth, offsetLeft } = selectedElement
-      setUnderlineStyles({
-        width: offsetWidth,
-        left: offsetLeft,
-      })
+    const currentPath = path
+    const activeNavItem = navLinks.find(item => item.link === currentPath)
+    if (activeNavItem) {
+      setActiveLink(activeNavItem.title)
     }
-  }, [selectedNavLink])
-  // Framer Motion variants for animations
-  const navItemVariant = {
-    hidden: { opacity: 0, y: 10 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "easeOut" } }
-  };
+  }, [path])
+
+  const navbarVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        type: 'spring',
+        stiffness: 100,
+        damping: 15,
+        staggerChildren: 0.1
+      }
+    }
+  }
+
+  const linkVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0 }
+  }
+
 
   return (
-    <div className="navbar-container relative">
-            <Navbar as={motion.div} initial="hidden" animate="visible" className="w-full shadow-md">
-        {/* Navbar Content Wrapper */}
-        <div className="flex items-center justify-between w-full px-4">
-          {/* Left Side: Logo */}
-          <NavbarBrand className="gap-2">
-            <p className="font-bold text-inherit">Morgan Hacks</p>
-          </NavbarBrand>
-
-          {/* Center: Navigation Links */}
-          <NavbarContent className="hidden sm:flex gap-6">
-            {navLinks.map((item, index) => (
-              <NavbarItem key={item.title} isActive={item.title === selectedNavLink}>
-                <motion.span
-                  variants={navItemVariant}
-                  initial="hidden"
-                  animate="visible"
-                  custom={index}
+    <motion.nav 
+    className="top-0 left-0 right-0 z-50 border-b border-white/10 w-full h-full"
+    initial="hidden"
+    animate="visible"
+    variants={navbarVariants}
+  >
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex items-center justify-between h-16">
+        <motion.div 
+          variants={linkVariants} 
+          className="flex-shrink-0"
+          whileHover={{ scale: 1.05 }}
+        >
+          <Link href="/" className="text-2xl font-bold">
+            <span className="text-[#87CEEB] drop-shadow-[0_0_10px_rgba(135,206,235,0.3)]">Morgan</span>
+            <span className="text-[#90EE90] drop-shadow-[0_0_10px_rgba(144,238,144,0.3)]">Hacks</span>
+          </Link>
+        </motion.div>
+        
+        <div className="hidden md:flex items-center space-x-1">
+          {navLinks.map((item) => (
+            <motion.div key={item.title} variants={linkVariants}>
+              <div
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 cursor-pointer ${
+                  activeLink === item.title
+                    ? 'text-white bg-white/10 shadow-[0_0_10px_rgba(255,255,255,0.1)]'
+                    : 'text-gray-300 hover:text-white hover:bg-white/5'
+                }`}
+                onClick={() => router.push(item.link)}
                 >
-                  <Link
-                    href="#"
-                    color={item.title === selectedNavLink ? "secondary" : "foreground"}
-                    onClick={() => {
-                      setSelectedNavLink(item.title);
-                      router.push(item.link);
-                    }}
-                    aria-current={item.title === selectedNavLink ? "page" : undefined}
-                    className="text-lg font-medium"
-                  >
-                    {item.title}
-                  </Link>
-                </motion.span>
-              </NavbarItem>
-            ))}
-          </NavbarContent>
-
-          {/* Right Side: Register Button */}
-          <NavbarContent justify="end">
-            <NavbarItem>
-              <Button as={Link} color="primary" href="#" variant="flat" onClick={() => router.push("/signup")}>
-                Register
-              </Button>
-            </NavbarItem>
-          </NavbarContent>
+                {item.title}
+              </div>
+            </motion.div>
+          ))}
+          <motion.div variants={linkVariants}>
+            <div
+            onClick={() => router.push('/')}
+            className="cursor-pointer ml-4 px-6 py-2 rounded-md text-sm font-medium bg-blue-500 text-white transition-all duration-300 hover:bg-blue-600 shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]"
+            >
+              Register
+            </div>
+          </motion.div>
         </div>
-      </Navbar>
+
+        <div className="md:hidden">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="p-2 rounded-md text-gray-300 hover:text-white focus:outline-none"
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
+      </div>
+    </div>
 
       {/* Animated Progress Bar */}
       <motion.div
@@ -107,6 +126,6 @@ export default function NavBar({ children }: Readonly<{
           </motion.div>
         </AnimatePresence>
       </main>
-    </div>
+    </motion.nav>
   );
 }
