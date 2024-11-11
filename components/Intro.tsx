@@ -33,7 +33,9 @@ export default function HackathonIntro() {
 
     return () => clearInterval(timer)
   }, [])
-
+if (timeLeft === null) {
+  return <div>Loading...</div>
+}
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

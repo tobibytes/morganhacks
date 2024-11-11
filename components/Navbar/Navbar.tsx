@@ -16,6 +16,7 @@ export default function NavBar({ children }: Readonly<{
   const [underlineStyles, setUnderlineStyles] = useState({ width: 0, left: 0 })
   const [isOpen, setIsOpen] = useState(false)
   const [activeLink, setActiveLink] = useState('Home')
+  const [play, setPlay] = useState(true)
 
   useEffect(() => {
     const currentPath = path
@@ -24,6 +25,12 @@ export default function NavBar({ children }: Readonly<{
       setActiveLink(activeNavItem.title)
     }
   }, [path])
+
+    const playAudio = async () => {
+      const audio = new Audio('/assets/regularshowaudio.mp3');
+      await audio.play();  
+    }
+
 
   const navbarVariants = {
     hidden: { opacity: 0, y: -50 },
@@ -51,6 +58,10 @@ export default function NavBar({ children }: Readonly<{
     initial="hidden"
     animate="visible"
     variants={navbarVariants}
+    onClick={() => {
+      if (play) playAudio()
+        setPlay(false)
+    }}
   >
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex items-center justify-between h-16">
@@ -82,7 +93,6 @@ export default function NavBar({ children }: Readonly<{
           ))}
           <motion.div variants={linkVariants}>
             <div
-            onClick={() => router.push('/')}
             className="cursor-pointer ml-4 px-6 py-2 rounded-md text-sm font-medium bg-blue-500 text-white transition-all duration-300 hover:bg-blue-600 shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]"
             >
               Register
