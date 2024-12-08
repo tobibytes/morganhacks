@@ -1,3 +1,4 @@
+"use client";
 import { motion } from 'framer-motion'
 // import { Linkedin } from 'lucide-react'
 import Image from 'next/image'
@@ -41,9 +42,9 @@ const teamMembers = [
   }
 ]
 
-export default function Teams() {
+export default function TeamComponent() {
   return (
-    <div className="py-16 bg-gradient-to-b from-purple-900 to-indigo-900">
+    <div className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-12">
           <span className="text-blue-400">Meet Our</span> <span className="text-green-400">Team</span>
@@ -61,8 +62,6 @@ export default function Teams() {
                 <Image
                   src={member.image}
                   alt={member.name}
-                  width={100}
-                  height={100}
                   layout="fill"
                   objectFit="cover"
                   className="transition-transform duration-300 hover:scale-110"

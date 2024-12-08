@@ -2,7 +2,7 @@ import HackathonIntro from "@/components/Intro";
 import Timeline from "@/components/TimeLine";
 import Tracks from "@/components/Tracks";
 import FAQ from "@/components/Faq"
-import Teams from "@/components/Teams";
+import TeamComponent from "@/components/Teams";
 
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
       <HackathonIntro />
           <Timeline />
           <Tracks />
-          <Teams />
+          <TeamComponent />
           <FAQ />
     </main>
   );
