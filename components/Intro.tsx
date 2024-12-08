@@ -59,7 +59,7 @@ if (timeLeft === null) {
   }
 
   return (
-    <div className="relative min-h-screen w-full bg-cover bg-center py-12 text-white">
+    <div className="relative w-full bg-cover bg-center py-12 text-white">
       <div className="absolute inset-0 bg-opacity-70"></div>
       <motion.div
         className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8"

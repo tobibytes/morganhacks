@@ -1,12 +1,7 @@
-"use client"
-import { useState, useEffect } from 'react'
+
 
 export default function Timeline() {
-  const [isClient, setIsClient] = useState(false)
 
-  useEffect(() => {
-    setIsClient(true)
-  }, [])
 
   const timelineEvents = [
     { time: '9:00 AM', event: 'Opening Ceremony', description: 'Welcome to Morgan Hacks!' },
@@ -21,11 +16,9 @@ export default function Timeline() {
 
   return (
     <div className="relative min-h-screen w-full bg-cover bg-center py-12 text-white">
-      {isClient && (
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-8 text-center text-4xl font-bold text-purple-300 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Morgan Hacks Timeline</h2>
           <div className="relative">
-            {/* Timeline line */}
             <div className="absolute left-1/2 h-full w-1 -translate-x-1/2 transform bg-blue-400"></div>
 
             {timelineEvents.map((event, index) => (
@@ -46,7 +39,6 @@ export default function Timeline() {
             ))}
           </div>
         </div>
-      )}
     </div>
   )
 }

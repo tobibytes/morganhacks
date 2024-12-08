@@ -11,39 +11,46 @@ export default function Tracks() {
 
   const tracks = [
     {
-      title: "AI & Machine Learning",
-      description: "Develop intelligent solutions using cutting-edge AI and ML techniques.",
-      icon: <Brain className="w-8 h-8 text-purple-400" />,
-      difficulty: "Advanced",
-      color: "bg-purple-800",
-    },
-    {
-      title: "Web3 & Blockchain",
-      description: "Build decentralized applications and explore blockchain technologies.",
-      icon: <Globe className="w-8 h-8 text-blue-400" />,
-      difficulty: "Intermediate",
-      color: "bg-blue-800",
-    },
-    {
-      title: "IoT & Hardware",
+      title: "Robotics",
       description: "Create innovative solutions combining software and hardware.",
       icon: <Cpu className="w-8 h-8 text-green-400" />,
       difficulty: "Advanced",
       color: "bg-green-800",
     },
     {
-      title: "Sustainability",
+      title: "Education",
       description: "Develop projects addressing environmental and social challenges.",
       icon: <Leaf className="w-8 h-8 text-yellow-400" />,
       difficulty: "Beginner",
       color: "bg-yellow-800",
     },
     {
-      title: "Open Innovation",
+      title: "Entertainment",
       description: "Unleash your creativity with no restrictions. Surprise us!",
       icon: <Zap className="w-8 h-8 text-red-400" />,
       difficulty: "All Levels",
       color: "bg-red-800",
+    },
+    {
+      title: "Health",
+      description: "Unleash your creativity with no restrictions. Surprise us!",
+      icon: <Globe className="w-8 h-8 text-gray-400" />,
+      difficulty: "All Levels",
+      color: "bg-gray-800",
+    },
+    {
+      title: "Sustainability",
+      description: "Unleash your creativity with no restrictions. Surprise us!",
+      icon: <Brain className="w-8 h-8 text-purple-400" />,
+      difficulty: "All Levels",
+      color: "bg-purple-800",
+    },
+    {
+      title: "New Frontiers",
+      description: "Unleash your creativity with no restrictions. Surprise us!",
+      icon: <Star className="w-8 h-8 text-blue-400" />,
+      difficulty: "All Levels",
+      color: "bg-blue-800",
     },
   ]
 
