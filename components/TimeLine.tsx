@@ -1,9 +1,11 @@
+"use client"
+import { useState } from "react"
 
 
 export default function Timeline() {
+  const [activeDay, setActiveDay] = useState<'saturday' | 'sunday'>('saturday')
 
-
-  const timelineEvents = [
+  const Days = { 'saturday' :[
     { time: '8:00 AM', event: 'Check-in, Breakfast & Networking', description: 'Registration and meet the sponsors.' },
     { time: '9:00 AM', event: 'Sponsorship Fair', description: 'Engage with our amazing sponsors.' },
     { time: '10:30 AM', event: 'Opening Ceremony', description: 'Welcome to Morgan Hacks!' },
@@ -17,7 +19,9 @@ export default function Timeline() {
     { time: '1:00 PM', event: 'Lunch Break', description: 'Refuel with some grub.' },
     { time: '4:00 PM', event: 'Workshop 2', description: 'Level up your skills!' },
     { time: '5:00 PM', event: 'Dinner Served', description: 'Keep that energy up!' },
-    { time: '8:00 AM', event: 'Breakfast Served', description: 'Rise and shine, hackers!' },
+],
+ 'sunday' : [
+  { time: '8:00 AM', event: 'Breakfast Served', description: 'Rise and shine, hackers!' },
     { time: '11:00 AM', event: 'Pitch Practice', description: 'Get feedback from mentors.' },
     { time: '12:00 PM', event: 'Lunch Break', description: 'Recharge for the final stretch.' },
     { time: '1:00 PM', event: 'Submission Deadline', description: 'Submit your projects on Devpost.' },
@@ -28,8 +32,7 @@ export default function Timeline() {
     { time: '5:15 PM', event: 'Winners Announced', description: 'Celebrate the champions.' },
     { time: '5:45 PM', event: 'Networking Drinks & Dinner', description: 'End the event with good food and great connections.' }
 ]
-
-
+  }
   return (
     <div className="relative min-h-screen w-full bg-cover bg-center py-12 text-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -37,7 +40,7 @@ export default function Timeline() {
           <div className="relative">
             <div className="absolute left-1/2 h-full w-1 -translate-x-1/2 transform bg-blue-400"></div>
 
-            {timelineEvents.map((event, index) => (
+            {Days[activeDay].map((event, index) => (
               <div key={index} className={`mb-8 flex w-full items-center justify-between ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
                 <div className="w-5/12"></div>
                 <div className="z-20 flex h-8 w-8 items-center justify-center rounded-full bg-green-400 text-center font-bold shadow-xl">
@@ -53,7 +56,29 @@ export default function Timeline() {
                 </div>
               </div>
             ))}
+            </div>
+            <div className="relative">
+            <div className="absolute left-1/2 h-full w-1 -translate-x-1/2 transform bg-blue-400"></div>
+
+            {Days.sunday.map((event, index) => (
+              <div key={index} className={`mb-8 flex w-full items-center justify-between ${index % 2 === 1 ? 'flex-row-reverse' : ''}`}>
+                <div className="w-5/12"></div>
+                <div className="z-20 flex h-8 w-8 items-center justify-center rounded-full bg-green-400 text-center font-bold shadow-xl">
+                  <div className="h-4 w-4 rounded-full bg-purple-600"></div>
+                </div>
+                <div className="w-5/12">
+                  <div className="rounded-lg bg-opacity-80 p-4 shadow-xl transition-all duration-300 ease-in-out hover:scale-105 hover:bg-opacity-100" 
+                       style={{backgroundColor: 'rgba(76, 29, 149, 0.8)'}}>
+                    <h3 className="mb-1 text-lg font-bold text-green-300">{event.time}</h3>
+                    <h4 className="mb-2 text-xl font-bold text-blue-300">{event.event}</h4>
+                    <p className="text-sm text-gray-200">{event.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+            
           </div>
+
         </div>
     </div>
   )
