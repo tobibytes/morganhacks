@@ -39,7 +39,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <div className="min-h-screen py-16 text-white">
+    <div className="min-h-screen py-16 text-white bg-[#454351]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-12">
           <span className="text-blue-400">Frequently</span> <span className="text-green-400">Asked Questions</span>

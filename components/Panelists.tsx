@@ -36,31 +36,35 @@ const teamMembers = [
 
 export default function Panelists() {
 
-  return (
-    <div className="my-16 bg-gradient-to-b from-indigo-900 via-purple-900 to-blue-900 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h2 
-          className="text-6xl font-bold text-center mb-16"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <span className="text-blue-400">Meet Our</span>{" "}
-          <span className="text-green-400">Panelists</span>
-        </motion.h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {teamMembers.map((member, index) => (
-            <CardComponent
-              key={member.name}
-              {...member}
-              index={index}
-            />
-          ))}
+    return (
+        <div className="relative bg-[url('https://cdn.gamma.app/y5bpx9vs7tdbwam/generated-images/F6WXSczGpbx0L42fDypL_.png')] py-16 bg-cover bg-center">
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black opacity-70"></div>
+          
+          {/* Content Container */}
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.h2 
+              className="text-6xl font-bold text-center mb-16"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="text-blue-400">Meet Our</span>{" "}
+              <span className="text-green-400">Panelists</span>
+            </motion.h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+              {teamMembers.map((member, index) => (
+                <CardComponent
+                  key={member.name}
+                  {...member}
+                  index={index}
+                />
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  );
+      );
 }
 
 
