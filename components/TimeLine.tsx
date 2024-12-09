@@ -4,15 +4,31 @@ export default function Timeline() {
 
 
   const timelineEvents = [
-    { time: '9:00 AM', event: 'Opening Ceremony', description: 'Welcome to Morgan Hacks!' },
-    { time: '10:00 AM', event: 'Hacking Begins', description: 'Start your engines!' },
-    { time: '1:00 PM', event: 'Lunch Break', description: 'Refuel with some grub' },
-    { time: '6:00 PM', event: 'Dinner Time', description: 'Keep that energy up!' },
-    { time: '11:00 PM', event: 'Midnight Snack', description: 'Late night coding fuel' },
-    { time: '8:00 AM', event: 'Breakfast', description: 'Rise and shine, hackers!' },
-    { time: '12:00 PM', event: 'Hacking Ends', description: 'Pencils down!' },
-    { time: '2:00 PM', event: 'Closing Ceremony', description: 'Awards and celebrations' },
-  ]
+    { time: '8:00 AM', event: 'Check-in, Breakfast & Networking', description: 'Registration and meet the sponsors.' },
+    { time: '9:00 AM', event: 'Sponsorship Fair', description: 'Engage with our amazing sponsors.' },
+    { time: '10:30 AM', event: 'Opening Ceremony', description: 'Welcome to Morgan Hacks!' },
+    { time: '10:35 AM', event: 'Possible President Address', description: 'Special message from the president.' },
+    { time: '10:45 AM', event: 'Featured Speech/Presentation', description: 'Insights from our keynote speaker.' },
+    { time: '10:55 AM', event: 'Panel Session', description: 'Hear from industry experts.' },
+    { time: '11:30 AM', event: 'Hackathon Breakdown', description: 'Learn about the challenges and rules.' },
+    { time: '11:40 AM', event: 'Team Forming', description: 'Get to know your teammates!' },
+    { time: '12:00 PM', event: 'Hacking Begins', description: 'Start your engines!' },
+    { time: '1:00 PM', event: 'Workshop 1', description: 'Learn and build with sponsors.' },
+    { time: '1:00 PM', event: 'Lunch Break', description: 'Refuel with some grub.' },
+    { time: '4:00 PM', event: 'Workshop 2', description: 'Level up your skills!' },
+    { time: '5:00 PM', event: 'Dinner Served', description: 'Keep that energy up!' },
+    { time: '8:00 AM', event: 'Breakfast Served', description: 'Rise and shine, hackers!' },
+    { time: '11:00 AM', event: 'Pitch Practice', description: 'Get feedback from mentors.' },
+    { time: '12:00 PM', event: 'Lunch Break', description: 'Recharge for the final stretch.' },
+    { time: '1:00 PM', event: 'Submission Deadline', description: 'Submit your projects on Devpost.' },
+    { time: '1:30 PM', event: 'Presentations (Round 1 Judging)', description: 'Showcase your work to the judges.' },
+    { time: '3:45 PM', event: 'Top 6 Teams Announced', description: 'Find out who made it to the finals!' },
+    { time: '4:00 PM', event: 'Round 2 Judging', description: 'Final presentations for top teams.' },
+    { time: '5:05 PM', event: 'Closing Speech', description: 'Thank you for participating!' },
+    { time: '5:15 PM', event: 'Winners Announced', description: 'Celebrate the champions.' },
+    { time: '5:45 PM', event: 'Networking Drinks & Dinner', description: 'End the event with good food and great connections.' }
+]
+
 
   return (
     <div className="relative min-h-screen w-full bg-cover bg-center py-12 text-white">
