@@ -1,6 +1,6 @@
 "use client";
 import { motion } from 'framer-motion'
-// import { Linkedin } from 'lucide-react'
+import { Linkedin } from 'lucide-react'
 import Image from 'next/image'
 
 const teamMembers = [
