@@ -54,7 +54,7 @@ export default function NavBar({ children }: Readonly<{
 
   return (
     <motion.nav 
-    className="top-0 left-0 right-0 z-50 border-b border-white/10 w-full h-full"
+    className="w-full h-full"
     initial="hidden"
     animate="visible"
     variants={navbarVariants}
@@ -111,11 +111,11 @@ export default function NavBar({ children }: Readonly<{
       </div>
     </div>
 
-      {/* Animated Progress Bar */}
+
       <motion.div
             className="progress-bar"
             style={{ scaleX: scrollYProgress }} />
-      <main>
+      <main className="w-full">
         <AnimatePresence mode="wait">
           <motion.div
             key={selectedNavLink ? selectedNavLink : "empty"}
@@ -123,11 +123,12 @@ export default function NavBar({ children }: Readonly<{
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -10, opacity: 0 }}
             transition={{ duration: 0.2 }}
+            className="w-full"
           >
 
        
       <motion.div
-        className="underline"
+        className="underline w-full"
         animate={underlineStyles}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
       />
