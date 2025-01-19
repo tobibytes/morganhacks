@@ -1,8 +1,11 @@
+import TeamComponent from '@/components/Teams'
 import React from 'react'
 
 const Team = () => {
   return (
-    <div>Teams</div>
+    <>
+    <TeamComponent /> 
+    </>
   )
 }
 

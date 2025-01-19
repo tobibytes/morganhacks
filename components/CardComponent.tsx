@@ -31,7 +31,9 @@ export default function CardComponent({ name, role, image, linkedin, color, inde
           <Image
             src={image}
             alt={name}
-            layout="fill"
+            width={100}
+            height={100}
+            // layout="fill"
             objectFit="cover"
             className="transition-transform duration-500 group-hover:scale-110"
           />

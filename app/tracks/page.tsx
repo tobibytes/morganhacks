@@ -1,49 +1,12 @@
+import Tracks from '@/components/Tracks'
 import React from 'react'
 
-const Tracks = () => {
+const Page = () => {
   return (
-    <div>
-        Lorem ipsum odor amet, consectetuer adipiscing elit. Massa per dis commodo posuere nascetur cras tortor. Ultrices rutrum sed tellus ad habitasse ut. Nascetur finibus velit a ex facilisis adipiscing congue. At sapien suspendisse nisi placerat nec ad. Sapien morbi posuere interdum penatibus sit per. Suspendisse platea habitant vulputate ex cubilia blandit suspendisse eleifend.
-
-Risus nostra lobortis vel; venenatis platea ipsum inceptos primis. Eros gravida finibus scelerisque montes nulla aliquam magnis sociosqu nullam. Dictum varius mattis fames nunc imperdiet tristique laoreet cubilia. Pretium torquent mollis rhoncus malesuada in. Molestie feugiat pharetra etiam curabitur et. Ex cubilia blandit habitant elit fringilla vulputate torquent. Sed integer natoque posuere enim neque; ut fusce erat. Dictum eros risus arcu; odio libero habitasse. Pharetra proin aptent nostra habitant vestibulum.
-
-Vitae habitasse habitasse egestas semper elit amet diam quam. Nunc fermentum nostra quisque orci auctor aliquet blandit nisi. At maecenas porta dictum lobortis ut varius. Risus suscipit eleifend semper magna dis vitae. Venenatis at quisque ut himenaeos mollis. Natoque tincidunt natoque at etiam adipiscing massa fames porttitor orci? Himenaeos neque ultricies per sem phasellus turpis natoque. Odio inceptos commodo ligula aliquet; odio tempor.
-
-Auctor fusce aptent tristique metus a platea praesent. Purus cursus consequat tortor integer sagittis ligula sociosqu. Hac at tempor, nulla dui ultrices ex? Vestibulum tincidunt suscipit lacus dis pulvinar erat pulvinar. Hendrerit sollicitudin fermentum inceptos aliquet per viverra imperdiet! Nullam lectus pulvinar pretium nostra suscipit volutpat dignissim. Cras gravida cubilia inceptos, quis est suspendisse litora. Tempus inceptos sapien lobortis finibus diam arcu.
-
-Convallis odio facilisis netus posuere ridiculus. Interdum felis nisl per; pretium justo massa velit placerat curabitur. Vehicula nullam accumsan quisque ultrices fringilla. Volutpat vivamus mus tortor risus dapibus orci. Turpis ante class potenti sit rhoncus primis amet cubilia. Turpis per scelerisque senectus dictum praesent mauris habitant. Ac platea vehicula orci hac aptent nibh. Nullam mauris praesent laoreet curabitur mattis quis. Tempor et mi placerat nisi faucibus egestas lobortis.
-
-Elit eget convallis congue pretium efficitur interdum vulputate nostra. Inceptos mi nostra magnis ullamcorper nam laoreet primis enim. Eleifend neque euismod rhoncus, placerat dictum natoque. Ultrices eleifend dapibus proin tortor taciti sagittis sem placerat ligula. Vivamus viverra urna donec nullam lacinia habitasse. Natoque ipsum nam accumsan molestie eget sociosqu dolor etiam justo. Cubilia primis penatibus vel quisque laoreet. Vestibulum turpis tempus quisque torquent ridiculus torquent vulputate nascetur primis.
-
-Dapibus fermentum aliquet condimentum eleifend urna finibus. Vehicula lacus elementum ornare amet dolor morbi varius sit? Fusce ultrices pulvinar turpis blandit porttitor tristique sodales. Ante scelerisque cras duis feugiat aenean molestie leo laoreet fermentum. Felis mi facilisis pulvinar euismod lacus maecenas litora nisl. Lacinia vulputate gravida rutrum lectus blandit sit nullam posuere. Ex habitant proin quis curabitur tristique. Laoreet a varius curae consequat vehicula. Placerat velit fames ligula facilisi ante viverra suscipit.
-
-Potenti purus ullamcorper mollis; metus felis mollis dolor molestie dictumst. Nascetur vitae phasellus tellus fames finibus montes sollicitudin mattis. Vivamus euismod aptent elementum integer consequat commodo. Tincidunt ad felis litora facilisi viverra. Ac sodales dapibus aliquet; litora in class commodo hendrerit. Rhoncus commodo risus vestibulum efficitur faucibus urna tempus. Urna hendrerit finibus eros elit justo ridiculus. Elit lobortis lacus maximus, tortor pellentesque luctus platea? Odio consectetur nec vitae dapibus, class at conubia lacus massa? Montes donec laoreet inceptos mi bibendum tortor nam magna.
-
-At primis integer viverra non pretium urna tortor potenti. Aenean egestas tortor eleifend adipiscing fames per nibh. Urna hendrerit vulputate conubia diam ante nascetur ultrices pulvinar imperdiet. Risus suscipit commodo ad; tellus inceptos aptent. Mi netus elit tristique in potenti urna. Aet vivamus enim adipiscing interdum platea. Praesent cursus scelerisque erat faucibus orci.
-
-Ridiculus aenean suscipit quis in viverra; malesuada curabitur semper consequat. Sociosqu lectus neque litora convallis rhoncus fames eget. Fusce dis dolor vestibulum inceptos fermentum rhoncus rutrum. Mi parturient himenaeos duis risus facilisi. Efficitur torquent hendrerit vehicula senectus ac nam. Netus nisl malesuada nec ligula commodo facilisis pellentesque.
-
-Cras pretium eleifend bibendum elementum; conubia facilisis. Mattis lobortis ut ac suscipit leo elit praesent. Curae magnis eu maximus nullam et suspendisse habitant hac finibus. Dui amet scelerisque a pulvinar dui pharetra etiam nisl. Nisl sociosqu tristique; dignissim cursus maecenas senectus. Nam neque elit ex condimentum phasellus ad cras, adipiscing suspendisse. Porta integer porttitor sed magna vulputate ultrices vitae.
-
-Imperdiet senectus fames porta blandit rutrum rutrum mauris. Vivamus vitae leo in nisl scelerisque non neque. Tempor porta morbi curae, mauris taciti eget laoreet enim amet. Auctor interdum vitae sapien mattis venenatis in porttitor. Nascetur ad quisque etiam nibh erat ultricies in. Vehicula sociosqu ullamcorper lacus nascetur odio porttitor. Consequat sem ultrices suscipit malesuada convallis? Primis sodales vel himenaeos turpis in phasellus venenatis. Quisque blandit id rutrum venenatis tempor morbi montes. Dignissim vel blandit; platea cursus commodo ipsum non viverra.
-
-Enim ante habitasse malesuada tortor fusce class. Adipiscing nulla magnis potenti dolor donec nisi taciti eros. Fermentum urna mollis inceptos inceptos nam? Nam laoreet ligula dignissim non convallis curae suscipit nulla. Ut semper phasellus hendrerit sociosqu potenti tortor dolor. Tincidunt dapibus porttitor dolor ornare dolor tristique. Ligula egestas dictum venenatis diam torquent gravida id euismod. Conubia mi montes est elementum primis ex. Taciti porta vestibulum montes inceptos nisl bibendum orci potenti nam.
-
-Curabitur porta aptent risus dapibus aliquam vivamus. Dui quis primis himenaeos feugiat; rutrum non maecenas. At egestas duis ultrices quis arcu class. Aptent nostra parturient magnis et vehicula ante. Sed vehicula tempus euismod torquent suspendisse? Maecenas hac massa id, leo elementum mattis. Nascetur porttitor convallis justo fusce nunc lacus dictum at. Lobortis integer facilisis dis consectetur diam. Enim sit parturient hac scelerisque malesuada sem.
-
-Amet maecenas malesuada placerat natoque enim rutrum mus. Molestie orci potenti, maecenas dui elit potenti primis morbi. Cursus eleifend sed natoque euismod rhoncus, iaculis eget tellus. Ipsum conubia penatibus quisque vulputate finibus blandit maximus. Neque sem nostra, ad tortor interdum amet morbi augue. Tempor integer praesent etiam imperdiet dapibus imperdiet scelerisque ornare cras. Ante euismod maecenas nunc quam massa duis et mattis.
-
-Auctor at arcu magna morbi conubia. Cubilia vel quisque enim ante id. Duis dolor sapien venenatis fames ornare suscipit, magna enim litora. Nostra mi lectus nisi mauris curae. Natoque himenaeos augue augue turpis feugiat ex pharetra, faucibus posuere. Molestie urna natoque senectus phasellus iaculis sociosqu. In mollis viverra proin felis fames pharetra posuere ultrices. Integer scelerisque tempus metus pulvinar; dui venenatis torquent ipsum.
-
-In cubilia cursus sapien massa feugiat varius! Sollicitudin etiam elit nisl; consequat euismod et. Ridiculus arcu at augue amet dui vitae euismod. Egestas aenean sagittis sem est hendrerit primis. Mauris nisi netus metus himenaeos; erat odio. Senectus nisl tincidunt habitasse eu, velit tempus etiam. Elementum aptent potenti leo a eget sit sagittis habitasse imperdiet. Quisque lectus cras nascetur fames amet dolor.
-
-Varius ligula lorem ipsum penatibus accumsan fermentum. Leo ut sollicitudin sapien, cras cursus feugiat aliquet. Habitasse sollicitudin lobortis etiam ligula dui conubia vulputate vehicula. Ex proin integer proin arcu enim mauris mi orci. Duis suspendisse massa inceptos nam adipiscing. Nostra lorem congue pharetra, metus fermentum nullam. Maecenas purus platea mollis hac commodo dis. Suscipit sem imperdiet primis purus per quam finibus quis. Placerat phasellus in parturient ornare penatibus risus quam ultrices curabitur?
-
-Volutpat fusce vivamus lacinia iaculis, felis libero ullamcorper maximus. Consectetur duis ullamcorper eu maecenas faucibus ipsum conubia consequat turpis. Sociosqu rhoncus neque libero elit consequat. Purus quam nascetur etiam turpis imperdiet erat. Duis proin aliquet feugiat torquent pharetra conubia erat. Vestibulum tristique facilisis odio adipiscing ad blandit nostra turpis? Vestibulum pellentesque risus massa suscipit at praesent.
-
-Id mus porta lacinia pulvinar mauris blandit mauris turpis et. Praesent nisl pretium leo molestie viverra tristique velit. Cubilia ipsum non varius eget purus sem sollicitudin risus. Proin neque duis faucibus parturient natoque. Lorem dolor condimentum ligula leo mus eget convallis aenean. Eleifend tellus nulla habitant enim ultricies dis eros nulla. Lacus habitasse blandit quisque maecenas; tempus pellentesque. Auctor phasellus penatibus netus massa dictumst cras. Convallis semper justo eleifend vitae pretium eu cursus.
-    </div>
+    <>
+    <Tracks />
+    </>
   )
 }
 
-export default Tracks
+export default Page
