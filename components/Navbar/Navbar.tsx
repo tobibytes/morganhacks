@@ -9,9 +9,9 @@ import Link from "next/link";
 export default function NavBar({ children }: Readonly<{ children: React.ReactNode; }>) {
   const path = usePathname();
   const router = useRouter();
-  const [selectedNavLink, setSelectedNavLink] = useState(path.slice(1));
+  const selectedNavLink = path.slice(1)
   const { scrollYProgress } = useScroll();
-  const [underlineStyles, setUnderlineStyles] = useState({ width: 0, left: 0 })
+  const underlineStyles = { width: 0, left: 0 }
   const [isOpen, setIsOpen] = useState(false)
   const [activeLink, setActiveLink] = useState('Home')
   const [play, setPlay] = useState(true)
