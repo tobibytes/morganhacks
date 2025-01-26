@@ -10,8 +10,8 @@ export default function Home() {
     <main className="flex flex-col w-full">
       <HackathonIntro />
           <Tracks />
-          <Panelists/>
-          <TeamComponent />
+          {/* <Panelists/> */}
+          {/* <TeamComponent /> */}
           <FAQ />
     </main>
   );
