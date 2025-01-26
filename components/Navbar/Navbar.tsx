@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { navLinks } from "./navLinks";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
