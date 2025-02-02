@@ -26,15 +26,15 @@ export default function NavBar({ children }: Readonly<{ children: React.ReactNod
 
   const playAudio = async () => {
     const audio = new Audio('/assets/regularshowaudio.mp3');
-    await audio.play();  
+    await audio.play();
   }
 
   const navbarVariants = {
     hidden: { opacity: 0, y: -50 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { 
+      transition: {
         type: 'spring',
         stiffness: 100,
         damping: 15,
@@ -49,7 +49,7 @@ export default function NavBar({ children }: Readonly<{ children: React.ReactNod
   }
 
   return (
-    <motion.nav 
+    <motion.nav
       className="w-full h-full"
       initial="hidden"
       animate="visible"
@@ -61,8 +61,8 @@ export default function NavBar({ children }: Readonly<{ children: React.ReactNod
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <motion.div 
-            variants={linkVariants} 
+          <motion.div
+            variants={linkVariants}
             className="flex-shrink-0"
             whileHover={{ scale: 1.05 }}
           >
@@ -71,16 +71,15 @@ export default function NavBar({ children }: Readonly<{ children: React.ReactNod
               <span className="text-[#90EE90] drop-shadow-[0_0_10px_rgba(144,238,144,0.3)]">Hacks</span>
             </Link>
           </motion.div>
-          
+
           <div className="hidden md:flex items-center space-x-1">
             {navLinks.map((item) => (
               <motion.div key={item.title} variants={linkVariants}>
                 <div
-                  className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 cursor-pointer ${
-                    activeLink === item.title
+                  className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 cursor-pointer ${activeLink === item.title
                       ? 'text-white bg-white/10 shadow-[0_0_10px_rgba(255,255,255,0.1)]'
                       : 'text-gray-300 hover:text-white hover:bg-white/5'
-                  }`}
+                    }`}
                   onClick={() => router.push(item.link)}
                 >
                   {item.title}
@@ -88,11 +87,13 @@ export default function NavBar({ children }: Readonly<{ children: React.ReactNod
               </motion.div>
             ))}
             <motion.div variants={linkVariants}>
-              <div
-                className="cursor-pointer ml-4 px-6 py-2 rounded-md text-sm font-medium bg-blue-500 text-white transition-all duration-300 hover:bg-blue-600 shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]"
-              >
-                Register
-              </div>
+              <a href="https://www.jotform.com/form/240934884390162" target="_blank">
+                <div
+                  className="cursor-pointer ml-4 px-6 py-2 rounded-md text-sm font-medium bg-[#60A5FA] text-white transition-all duration-300 hover:bg-blue-600 shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]"
+                >
+                  Register
+                </div>
+              </a>
             </motion.div>
           </div>
 

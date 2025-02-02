@@ -73,7 +73,7 @@ export default function FAQ() {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="px-6 pb-4 text-gray-300">
+                    <div className="px-6 pb-4 text-gray-300 text-sm font-sans leading-relaxed">
                       {faq.answer}
                     </div>
                   </motion.div>
@@ -86,12 +86,17 @@ export default function FAQ() {
       <div className="mt-16 text-center">
         <p className="text-lg text-gray-300 mb-4">Still have questions?</p>
         <a
-          href="mailto:info@morganhacks.com"
+          href="mailto:morganhacks2022@gmail.com?subject=Learn%20More%20About%20MorganHacks&body=Hello%20there%20i%20would%20love%20to%20learn%20more%20about%20morganhacks." target="_blank"
           className="inline-block px-6 py-3 rounded-full text-white font-medium transition-all duration-300  hover:shadow-lg hover:shadow-blue-500/50"
         >
-          Contact Us
+          Contact Us:{" "}
+          <span className="text-[#87CEEB] drop-shadow-[0_0_10px_rgba(135,206,235,0.3)]">Morgan</span>
+          <span className="text-[#90EE90] drop-shadow-[0_0_10px_rgba(144,238,144,0.3)]">Hacks</span>
+          <span className="drop-shadow-[0_0_10px_rgba(144,238,144,0.3)]">2022@gmail.com</span>
         </a>
       </div>
     </div>
   )
 }
+
+

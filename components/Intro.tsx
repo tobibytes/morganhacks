@@ -33,9 +33,9 @@ export default function HackathonIntro() {
 
     return () => clearInterval(timer)
   }, [])
-if (timeLeft === null) {
-  return <div>Loading...</div>
-}
+  if (timeLeft === null) {
+    return <div>Loading...</div>
+  }
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -88,7 +88,7 @@ if (timeLeft === null) {
               cursor={false}
             />
           </motion.div>
-          <motion.div 
+          <motion.div
             className="mb-8 flex justify-center space-x-4"
             variants={itemVariants}
           >
@@ -111,7 +111,7 @@ if (timeLeft === null) {
               </CardContent>
             </Card>
           </motion.div>
-          <motion.div 
+          <motion.div
             className="mb-8 text-3xl font-bold text-yellow-300"
             variants={itemVariants}
           >
@@ -125,23 +125,27 @@ if (timeLeft === null) {
               ))}
             </div>
           </motion.div>
-          <motion.div 
+          <motion.div
             className="flex justify-center space-x-4"
             variants={itemVariants}
           >
-            <Button 
-              size="lg" 
-              className="bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300"
-            >
-              Register Now
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-green-400 text-green-400 hover:bg-green-400 hover:text-white transition-all duration-300"
-            >
-              Learn More
-            </Button>
+            <a href="https://www.jotform.com/form/240934884390162" target="_blank">
+              <Button
+                size="lg"
+                className="bg-[#60A5FA] text-white hover:bg-blue-700 transition-all duration-300"
+              >
+                Register Now
+              </Button>
+            </a>
+            <a href="mailto:morganhacks2022@gmail.com?subject=Learn%20More%20About%20MorganHacks&body=Hello%20there%20i%20would%20love%20to%20learn%20more%20about%20morganhacks." target="_blank">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-green-400 text-green-400 hover:bg-green-400 hover:text-white transition-all duration-300"
+              >
+                Learn More
+              </Button>
+            </a>
           </motion.div>
         </div>
       </motion.div>
