@@ -5,6 +5,7 @@ import { navLinks } from "./navLinks";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import {SocialIcon} from 'react-social-icons'
 
 export default function NavBar({ children }: Readonly<{ children: React.ReactNode; }>) {
   const path = usePathname();
@@ -49,8 +50,8 @@ export default function NavBar({ children }: Readonly<{ children: React.ReactNod
   }
 
   return (
-    <motion.nav
-      className="w-full h-full"
+    <motion.nav 
+      className="w-full h-full relative"
       initial="hidden"
       animate="visible"
       variants={navbarVariants}
@@ -95,6 +96,9 @@ export default function NavBar({ children }: Readonly<{ children: React.ReactNod
                 </div>
               </a>
             </motion.div>
+              <SocialIcon url="https://instagram.com" />
+              <SocialIcon url="https://facebook.com" />
+              <SocialIcon url="https://x.com" />
           </div>
 
           {/* Mobile Menu Button */}
@@ -156,7 +160,14 @@ export default function NavBar({ children }: Readonly<{ children: React.ReactNod
             {children}
           </motion.div>
         </AnimatePresence>
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-5">
+        <SocialIcon url="https://instagram.com" />
+        <SocialIcon url="https://facebook.com" />
+        <SocialIcon url="https://x.com" />
+      </div>
       </main>
+
+
     </motion.nav>
   );
 }

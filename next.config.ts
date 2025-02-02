@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
 // next.config.js
 module.exports = {
   images: {
-    domains: ['media.istockphoto.com'],
+    domains: ['media.istockphoto.com', 'drive.google.com'],
   },
 }
 export default nextConfig;
