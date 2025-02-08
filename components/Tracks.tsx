@@ -4,50 +4,57 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogClose } from "@/components/ui/dialog"
 import { Brain, Cpu, Globe, Leaf, Zap, Star } from "lucide-react"
 
 export default function Tracks() {
-  const [hoveredTrack, setHoveredTrack] = useState<number | null>(null)
+  const [selectedTrack, setSelectedTrack] = useState<null | any>(null)
 
   const tracks = [
     {
       title: "Robotics",
-      description: "Create innovative solutions combining software and hardware.",
-      icon: <Cpu className="w-8 h-8 text-green-400" />,
+      description: "Create innovative solutions combining software and hardware. Learn about automation, AI, and embedded systems.",
+      resources: "Courses: Coursera's Robotics Specialization, MIT OpenCourseWare. Tools: ROS, Arduino, Raspberry Pi.",
+      icon: <Cpu className="w-8 h-8 text-green-400" />, 
       difficulty: "Advanced",
       color: "bg-green-800",
     },
     {
       title: "Education",
-      description: "Develop projects addressing environmental and social challenges.",
+      description: "Develop projects addressing educational challenges using technology, such as e-learning platforms and AI tutors.",
+      resources: "Courses: Khan Academy, EdX's EdTech Programs. Tools: Moodle, Google Classroom, OpenAI APIs.",
       icon: <Leaf className="w-8 h-8 text-yellow-400" />,
       difficulty: "Beginner",
       color: "bg-yellow-800",
     },
     {
       title: "Entertainment",
-      description: "Unleash your creativity with no restrictions. Surprise us!",
+      description: "Create interactive media, games, or VR experiences that engage and inspire audiences.",
+      resources: "Courses: Unity Learn, Udemy's Game Development Courses. Tools: Unreal Engine, Godot, WebGL.",
       icon: <Zap className="w-8 h-8 text-red-400" />,
       difficulty: "All Levels",
       color: "bg-red-800",
     },
     {
       title: "Health",
-      description: "Unleash your creativity with no restrictions. Surprise us!",
+      description: "Develop solutions to improve healthcare, such as wearable devices, telemedicine apps, and AI diagnostics.",
+      resources: "Courses: Stanford's AI in Healthcare, Harvard's Biomedical Engineering. Tools: TensorFlow, PyTorch, WHO APIs.",
       icon: <Globe className="w-8 h-8 text-gray-400" />,
       difficulty: "All Levels",
       color: "bg-gray-800",
     },
     {
       title: "Sustainability",
-      description: "Unleash your creativity with no restrictions. Surprise us!",
+      description: "Innovate in renewable energy, smart agriculture, and environmental conservation using tech.",
+      resources: "Courses: Coursera's Renewable Energy, Udacity's AI for Earth. Tools: OpenWeather API, GIS tools, IoT sensors.",
       icon: <Brain className="w-8 h-8 text-purple-400" />,
       difficulty: "All Levels",
       color: "bg-purple-800",
     },
     {
       title: "New Frontiers",
-      description: "Unleash your creativity with no restrictions. Surprise us!",
+      description: "Explore cutting-edge tech such as quantum computing, space tech, and biotech.",
+      resources: "Courses: IBM's Quantum Computing, NASA's Space Apps Challenges. Tools: Qiskit, SpaceX API, CRISPR Simulators.",
       icon: <Star className="w-8 h-8 text-blue-400" />,
       difficulty: "All Levels",
       color: "bg-blue-800",
@@ -56,101 +63,43 @@ export default function Tracks() {
 
   return (
     <div className="py-16 relative overflow-hidden">
-      {/* Space-like background */}
-      <div className="absolute inset-0">
-        {[...Array(50)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-white rounded-full"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              scale: [1, 1.5, 1],
-              opacity: [1, 0.5, 1],
-            }}
-            transition={{
-              duration: Math.random() * 3 + 2,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-        ))}
-      </div>
-
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.h2 
-          className="text-4xl font-extrabold text-center text-white mb-8"
-          initial={{ y: -50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          Hackathon Tracks
-        </motion.h2>
-        <motion.p 
-          className="text-xl text-center text-blue-200 mb-12"
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          Choose your challenge and make a difference!
-        </motion.p>
+        <h2 className="text-4xl font-extrabold text-center text-white mb-8">Hackathon Tracks</h2>
+        <p className="text-xl text-center text-blue-200 mb-12">Choose your challenge and make a difference!</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {tracks.map((track, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              onHoverStart={() => setHoveredTrack(index)}
-              onHoverEnd={() => setHoveredTrack(null)}
-            >
-              <Card className={`${track.color} border-none shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden`}>
+            <div key={index} onClick={() => setSelectedTrack(track)}>
+              <Card className={`${track.color} border-none shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden`}>                
                 <CardHeader>
                   <div className="flex items-center justify-between">
-                    <motion.div
-                      animate={{
-                        rotate: hoveredTrack === index ? 360 : 0,
-                      }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      {track.icon}
-                    </motion.div>
-                    <Badge variant="secondary" className="text-xs">
-                      {track.difficulty}
-                    </Badge>
+                    {track.icon}
+                    <Badge variant="secondary" className="text-xs">{track.difficulty}</Badge>
                   </div>
                   <CardTitle className="text-xl font-bold mt-4 text-white">{track.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-sm text-gray-200">{track.description}</CardDescription>
                 </CardContent>
-                {/* Animated stars */}
-                {hoveredTrack === index && (
-                  <>
-                    {[...Array(5)].map((_, i) => (
-                      <motion.div
-                        key={i}
-                        className="absolute"
-                        initial={{ opacity: 0, scale: 0 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5, delay: i * 0.1 }}
-                        style={{
-                          top: `${Math.random() * 100}%`,
-                          left: `${Math.random() * 100}%`,
-                        }}
-                      >
-                        <Star className="w-4 h-4 text-yellow-300" />
-                      </motion.div>
-                    ))}
-                  </>
-                )}
               </Card>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
+
+      {selectedTrack && (
+        <Dialog open={!!selectedTrack} onOpenChange={() => setSelectedTrack(null)}>
+          <DialogContent className={`${selectedTrack.color} text-white p-6 rounded-lg shadow-xl max-w-2xl`}> 
+            <DialogHeader>
+              <DialogTitle className="text-2xl font-bold">{selectedTrack.title}</DialogTitle>
+              <DialogClose className="absolute top-4 right-4 text-white cursor-pointer">✕</DialogClose>
+            </DialogHeader>
+            <DialogDescription className="mt-4">
+              <p className="text-lg">{selectedTrack.description}</p>
+              <p className="mt-6 text-sm text-gray-300">{selectedTrack.resources}</p>
+            </DialogDescription>
+          </DialogContent>
+        </Dialog>
+      )}
     </div>
   )
 }
