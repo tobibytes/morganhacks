@@ -96,9 +96,9 @@ export default function NavBar({ children }: Readonly<{ children: React.ReactNod
                 </div>
               </a>
             </motion.div>
-              <SocialIcon url="https://instagram.com" />
+              {/* <SocialIcon url="https://instagram.com" />
               <SocialIcon url="https://facebook.com" />
-              <SocialIcon url="https://x.com" />
+              <SocialIcon url="https://x.com" /> */}
           </div>
 
           {/* Mobile Menu Button */}

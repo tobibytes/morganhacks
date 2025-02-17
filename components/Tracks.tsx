@@ -1,36 +1,55 @@
 'use client'
 
-import { useState } from 'react'
+import { ForwardRefExoticComponent, RefAttributes, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogClose } from "@/components/ui/dialog"
-import { Brain, Cpu, Globe, Leaf, Zap, Star } from "lucide-react"
+import { Brain, Cpu, Globe, Leaf, Zap, Star, LucideProps } from "lucide-react"
 
+interface tracksType {
+  title: string;
+  description: string;
+  resources: {
+    name: string;
+    link: string;
+  }[],
+  icon: any;
+  difficulty: string;
+  color: string;
+}
 export default function Tracks() {
-  const [selectedTrack, setSelectedTrack] = useState<null | any>(null)
-
-  const tracks = [
+  const [selectedTrack, setSelectedTrack] = useState<null | tracksType>(null)
+  const tracks: tracksType[] = [
     {
       title: "Robotics",
       description: "Create innovative solutions combining software and hardware. Learn about automation, AI, and embedded systems.",
-      resources: "Courses: Coursera's Robotics Specialization, MIT OpenCourseWare. Tools: ROS, Arduino, Raspberry Pi.",
+      resources: [
+        { name: "Coursera's Robotics Specialization", link: "https://www.coursera.org/specializations/robotics" },
+        { name: "MIT OpenCourseWare", link: "https://ocw.mit.edu/courses/mechanical-engineering/2-12-introduction-to-robotics-fall-2005/" }
+      ],
       icon: <Cpu className="w-8 h-8 text-green-400" />, 
-      difficulty: "Advanced",
+      difficulty: "All levels",
       color: "bg-green-800",
     },
     {
       title: "Education",
       description: "Develop projects addressing educational challenges using technology, such as e-learning platforms and AI tutors.",
-      resources: "Courses: Khan Academy, EdX's EdTech Programs. Tools: Moodle, Google Classroom, OpenAI APIs.",
+      resources: [
+        { name: "Khan Academy", link: "https://www.khanacademy.org/" },
+        { name: "EdX's EdTech Programs", link: "https://www.edx.org/learn/education" }
+      ],
       icon: <Leaf className="w-8 h-8 text-yellow-400" />,
-      difficulty: "Beginner",
+      difficulty: "All levels",
       color: "bg-yellow-800",
     },
     {
       title: "Entertainment",
       description: "Create interactive media, games, or VR experiences that engage and inspire audiences.",
-      resources: "Courses: Unity Learn, Udemy's Game Development Courses. Tools: Unreal Engine, Godot, WebGL.",
+      resources: [
+        { name: "Unity Learn", link: "https://learn.unity.com/" },
+        { name: "Udemy's Game Development Courses", link: "https://www.udemy.com/topic/game-development/" }
+      ],
       icon: <Zap className="w-8 h-8 text-red-400" />,
       difficulty: "All Levels",
       color: "bg-red-800",
@@ -38,7 +57,10 @@ export default function Tracks() {
     {
       title: "Health",
       description: "Develop solutions to improve healthcare, such as wearable devices, telemedicine apps, and AI diagnostics.",
-      resources: "Courses: Stanford's AI in Healthcare, Harvard's Biomedical Engineering. Tools: TensorFlow, PyTorch, WHO APIs.",
+      resources: [
+        { name: "Stanford's AI in Healthcare", link: "https://ai100.stanford.edu/" },
+        { name: "Harvard's Biomedical Engineering", link: "https://www.seas.harvard.edu/bioengineering" }
+      ],
       icon: <Globe className="w-8 h-8 text-gray-400" />,
       difficulty: "All Levels",
       color: "bg-gray-800",
@@ -46,7 +68,10 @@ export default function Tracks() {
     {
       title: "Sustainability",
       description: "Innovate in renewable energy, smart agriculture, and environmental conservation using tech.",
-      resources: "Courses: Coursera's Renewable Energy, Udacity's AI for Earth. Tools: OpenWeather API, GIS tools, IoT sensors.",
+      resources: [
+        { name: "Coursera's Renewable Energy", link: "https://www.coursera.org/specializations/renewable-energy" },
+        { name: "Udacity's AI for Earth", link: "https://www.udacity.com/course/ai-for-earth--ud987" }
+      ],
       icon: <Brain className="w-8 h-8 text-purple-400" />,
       difficulty: "All Levels",
       color: "bg-purple-800",
@@ -54,12 +79,15 @@ export default function Tracks() {
     {
       title: "New Frontiers",
       description: "Explore cutting-edge tech such as quantum computing, space tech, and biotech.",
-      resources: "Courses: IBM's Quantum Computing, NASA's Space Apps Challenges. Tools: Qiskit, SpaceX API, CRISPR Simulators.",
+      resources: [
+        { name: "IBM's Quantum Computing", link: "https://quantum-computing.ibm.com/" },
+        { name: "NASA's Space Apps Challenges", link: "https://www.spaceappschallenge.org/" }
+      ],
       icon: <Star className="w-8 h-8 text-blue-400" />,
       difficulty: "All Levels",
       color: "bg-blue-800",
     },
-  ]
+];
 
   return (
     <div className="py-16 relative overflow-hidden">
@@ -87,19 +115,30 @@ export default function Tracks() {
       </div>
 
       {selectedTrack && (
-        <Dialog open={!!selectedTrack} onOpenChange={() => setSelectedTrack(null)}>
-          <DialogContent className={`${selectedTrack.color} text-white p-6 rounded-lg shadow-xl max-w-2xl`}> 
-            <DialogHeader>
-              <DialogTitle className="text-2xl font-bold">{selectedTrack.title}</DialogTitle>
-              <DialogClose className="absolute top-4 right-4 text-white cursor-pointer">✕</DialogClose>
-            </DialogHeader>
-            <DialogDescription className="mt-4">
-              <p className="text-lg">{selectedTrack.description}</p>
-              <p className="mt-6 text-sm text-gray-300">{selectedTrack.resources}</p>
-            </DialogDescription>
-          </DialogContent>
-        </Dialog>
-      )}
+    <Dialog open={!!selectedTrack} onOpenChange={() => setSelectedTrack(null)}>
+      <DialogContent className={`${selectedTrack.color} text-white p-8 rounded-lg shadow-2xl max-w-4xl max-h-96`}> 
+        <DialogHeader>
+          <DialogTitle className="text-3xl font-bold">{selectedTrack.title}</DialogTitle>
+        </DialogHeader>
+        <DialogDescription className="mt-6">
+          <p className="text-lg leading-relaxed text-white">{selectedTrack.description}</p>
+          <div className="mt-8 text-base text-gray-300">
+            <p className="font-semibold text-white">Recommended Resources:</p>
+            <ul className="list-disc pl-6 mt-2">
+              {selectedTrack.resources.map((resource, index) => (
+                <li key={index} className="mt-2">
+                  <a href={resource.link} target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:underline">{resource.name}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </DialogDescription>
+      </DialogContent>
+    </Dialog>
+)}
+
+
+
     </div>
   )
 }
