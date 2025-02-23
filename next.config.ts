@@ -4,11 +4,15 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "media.istockphoto.com",
+        hostname: "lh3.googleusercontent.com", // Google-hosted images (Drive indirect links)
       },
       {
         protocol: "https",
-        hostname: "drive.google.com",
+        hostname: "media.istockphoto.com", // iStock photos
+      },
+      {
+        protocol: "https",
+        hostname: "*.google.com", // Covers various Google subdomains
       },
     ],
   },
