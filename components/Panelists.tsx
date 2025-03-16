@@ -37,7 +37,7 @@ const teamMembers = [
 export default function Panelists() {
 
     return (
-        <div className="relative bg-[url('https://cdn.gamma.app/y5bpx9vs7tdbwam/generated-images/F6WXSczGpbx0L42fDypL_.png')] py-16 bg-cover bg-center">
+        <div className="relative bg-[url('https://cdn.gamma.app/y5bpx9vs7tdbwam/generated-images/F6WXSczGpbx0L42fDypL_.png')] py-16 mb-14 bg-cover bg-center">
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-black opacity-70"></div>
           

@@ -31,10 +31,8 @@ export default function CardComponent({ name, role, image, linkedin, color, inde
           <Image
             src={image}
             alt={name}
-            width={100}
-            height={100}
-            // layout="fill"
-            objectFit="cover"
+            fill={true}
+            style={{objectFit: 'contain'}}
             className="transition-transform duration-500 group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
@@ -56,13 +54,7 @@ export default function CardComponent({ name, role, image, linkedin, color, inde
               className="p-2 bg-blue-500 rounded-full hover:bg-blue-600 transition-colors duration-300"
             >
               <Linkedin className="w-5 h-5 text-white" />
-            </a>
-            <a
-              href="#"
-              className="p-2 bg-gray-700 rounded-full hover:bg-gray-600 transition-colors duration-300"
-            >
-              <GithubIcon className="w-5 h-5 text-white" />
-            </a>
+            </a> 
             <a
               href="#"
               className="p-2 bg-red-500 rounded-full hover:bg-red-600 transition-colors duration-300"

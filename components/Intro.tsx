@@ -12,7 +12,7 @@ export default function HackathonIntro() {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const hackathonDate = new Date('2025-04-15T09:00:00') // Set your actual date here
+      const hackathonDate = new Date('2025-04-26T09:00:00') // Set your actual date here
       const now = new Date()
       const difference = hackathonDate.getTime() - now.getTime()
 
@@ -95,19 +95,19 @@ export default function HackathonIntro() {
             <Card className="bg-opacity-80 backdrop-blur-sm">
               <CardContent className="flex items-center p-4">
                 <Coffee className="mr-2 h-6 w-6 text-yellow-400" />
-                <span className="text-lg font-semibold">24 Hours</span>
+                <span className="text-lg font-semibold">48 Hours</span>
               </CardContent>
             </Card>
             <Card className="bg-opacity-80 backdrop-blur-sm">
               <CardContent className="flex items-center p-4">
                 <Users className="mr-2 h-6 w-6 text-pink-400" />
-                <span className="text-lg font-semibold">300+ Hackers</span>
+                <span className="text-lg font-semibold">100+ Hackers</span>
               </CardContent>
             </Card>
             <Card className="bg-opacity-80 backdrop-blur-sm">
               <CardContent className="flex items-center p-4">
                 <Code className="mr-2 h-6 w-6 text-green-400" />
-                <span className="text-lg font-semibold">10+ Challenges</span>
+                <span className="text-lg font-semibold">Workshops</span>
               </CardContent>
             </Card>
           </motion.div>
