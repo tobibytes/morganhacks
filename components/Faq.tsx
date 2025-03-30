@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     question: "Do I need a team?",
-    answer: "You can participate solo or in a team of up to 4 members. Don't have a team? No worries! We'll have team formation activities at the beginning of the event."
+    answer: "You can participate in a team of 2-4 members. Don't have a team? No worries! We'll have team formation activities at the beginning of the event."
   },
   {
     question: "What should I bring?",
