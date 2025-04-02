@@ -14,6 +14,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "*.google.com", // Covers various Google subdomains
       },
+      {
+        protocol: "https",
+        hostname: "s3.amazonaws.com", // Covers various Google subdomains
+      },
     ],
   },
 };

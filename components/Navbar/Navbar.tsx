@@ -6,6 +6,7 @@ import { AnimatePresence, motion, useScroll } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import {SocialIcon} from 'react-social-icons'
+import Image from "next/image";
 
 export default function NavBar({ children }: Readonly<{ children: React.ReactNode; }>) {
   const path = usePathname();
@@ -96,9 +97,7 @@ export default function NavBar({ children }: Readonly<{ children: React.ReactNod
                 </div>
               </a>
             </motion.div>
-              {/* <SocialIcon url="https://instagram.com" />
-              <SocialIcon url="https://facebook.com" />
-              <SocialIcon url="https://x.com" /> */}
+            <a id="mlh-trust-badge" style={{display:'block',maxWidth:100,minWidth:60, marginTop: '15%',width:'10%',zIndex:10000}} href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=white" target="_blank"><Image src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg" alt="Major League Hacking 2025 Hackathon Season" width={90} height={90} /></a>  
           </div>
 
           {/* Mobile Menu Button */}

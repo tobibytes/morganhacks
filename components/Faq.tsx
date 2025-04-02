@@ -32,6 +32,11 @@ const faqs = [
   {
     question: "Will there be prizes?",
     answer: "We have awesome prizes for the top projects in each track, as well as special category awards. May the best hackers win!"
+  },
+  {
+    question: "Is there a code of conduct?",
+    answer: "Yes, we follow the MLH code of coduct. You can find it at https://mlh.link/CodeOfConduct"
+
   }
 ]
 
@@ -81,6 +86,37 @@ export default function FAQ() {
               </AnimatePresence>
             </motion.div>
           ))}
+          {/* <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="bg-white bg-opacity-10 rounded-lg overflow-hidden"
+            >
+              <button
+                className="w-full px-6 py-4 text-left focus:outline-none flex justify-between items-center"
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              >
+                <span className="text-lg font-medium">{faq.question}</span>
+                <motion.span
+                  animate={{ rotate: openIndex === index ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <ChevronDown className="w-5 h-5 text-blue-400" />
+                </motion.span>
+              </button>
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <div className="px-6 pb-4 text-gray-300 text-sm font-sans leading-relaxed">
+                      {faq.answer}
+                    </div>
+                  </motion.div> */}
         </div>
       </div>
       <div className="mt-16 text-center">
