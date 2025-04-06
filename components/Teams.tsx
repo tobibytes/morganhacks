@@ -12,24 +12,24 @@ const teamMembers = [
   //   color: "bg-green-500"
   // },
   {
-    name: "Anay",
-    role: "Vice President & Sponsorship Team",
+    name: "Anay Zaveri",
+    role: "Vice President and Lead of Sponsorships and Partnerships",
     image: "/team/anay.jpg",
-    linkedin: "https://linkedin.com/in/mordecai-blue",
+    linkedin: "https://www.linkedin.com/in/anay-zaveri-b5ab941b3e",
     color: "bg-blue-500"
   },
   {
-    name: "Grace",
+    name: "Iyinoluwa Grace Ayodele",
     role: "Operations Team",
     image: "/team/grace.jpg",
-    linkedin: "https://linkedin.com/in/mordecai-blue",
+    linkedin: "http://www.linkedin.com/in/iyinoluwa-ayodele",
     color: "bg-blue-500"
   },
   {
     name: "Sanae",
     role: "Operations Team",
     image: "/team/sanae.jpg",
-    linkedin: "https://linkedin.com/in/mordecai-blue",
+    linkedin: "https://www.linkedin.com/in/mordecai-blue",
     color: "bg-blue-500"
   },
   // {
@@ -40,17 +40,17 @@ const teamMembers = [
   //   color: "bg-blue-500"
   // },
   {
-    name: "Oba",
+    name: "Obaloluwa Wojuade ",
     role: "Media Team",
     image: "/team/oba.jpg",
-    linkedin: "https://linkedin.com/in/mordecai-blue",
+    linkedin: "https://www.linkedin.com/in/obwoj/",
     color: "bg-blue-500"
   },
   {
     name: "Tobi",
     role: "Technology Team",
     image: "/team/tobi.jpg",
-    linkedin: "https://linkedin.com/in/mordecai-blue",
+    linkedin: "https://www.linkedin.com/in/oluwatobi-olajide",
     color: "bg-blue-500"
   },
 //   {
@@ -61,10 +61,10 @@ const teamMembers = [
 //   color: "bg-pink-200"
 // },
   // {
-  //   name: "Chelsea",
-  //   role: "Logistics Team",
+  //   name: "Chelsea Minard",
+  //   role: "Media + Marketing Lead",
   //   image: "https://media.istockphoto.com/id/1164586449/photo/i-dont-know-portrait-of-young-confused-man-in-white-t-shirt-standing-and-shrugging-shoulders.jpg?s=612x612&w=0&k=20&c=LbPsVG5ZGGitd6Vn3xElKfSWr9PmXHR5J3Qv2TNaAm4=",
-  //   linkedin: "https://linkedin.com/in/mordecai-blue",
+  //   linkedin: "https://www.linkedin.com/in/chelsea-minard",
   //   color: "bg-blue-500"
   // },
   {
@@ -75,10 +75,10 @@ const teamMembers = [
     color: "bg-red-500"
   },
   {
-    name: "Segun",
+    name: "Olwasegun Soji-John",
     role: "Registration Team",
     image: "/team/segun.jpg",
-    linkedin: "https://linkedin.com/in/rigby-raccoon",
+    linkedin: "https://www.linkedin.com/in/oluwasegun-soji-john/",
     color: "bg-brown-500"
   },
   // {
@@ -89,17 +89,17 @@ const teamMembers = [
   //   color: "bg-gray-200"
   // },
   {
-    name: "Ayo",
+    name: "Ayomide Ajibola",
     role: "Finance Team",
     image: "/team/ayo.jpg",
-    linkedin: "https://linkedin.com/in/pops-maellard",
+    linkedin: "https://www.linkedin.com/in/ayomide-ajibola-",
     color: "bg-pink-200"
   },
   // {
-  //   name: "JK",
-  //   role: "Registration Team",
+  //   name: "Jomiloju",
+  //   role: "Sponsorship Team",
   //   image: "https://media.istockphoto.com/id/1164586449/photo/i-dont-know-portrait-of-young-confused-man-in-white-t-shirt-standing-and-shrugging-shoulders.jpg?s=612x612&w=0&k=20&c=LbPsVG5ZGGitd6Vn3xElKfSWr9PmXHR5J3Qv2TNaAm4=",
-  //   linkedin: "https://linkedin.com/in/skips-yeti",
+  //   linkedin: "https://www.linkedin.com/in/oluwajomiloju-king/",
   //   color: "bg-gray-200"
   // },
 ];
