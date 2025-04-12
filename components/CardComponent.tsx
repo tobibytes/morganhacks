@@ -34,7 +34,7 @@ export default function CardComponent({ name, role, image, linkedin, color, inde
             src={image}
             alt={name}
             fill={true}
-            style={{objectFit: 'cover'}}
+            style={{objectFit: 'contain'}}
             className="transition-transform duration-500 group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>

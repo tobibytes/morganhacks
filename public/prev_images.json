@@ -1,11 +1,12 @@
 [
-    {"src": "/pictures/1.jpg", "alt": "Image 1"},
-    {"src": "/pictures/2.jpg", "alt": "Image 1"},
+    {"src": "/pictures/1.png", "alt": "Image 1"},
+    {"src": "/pictures/2.png", "alt": "Image 1"},
     {"src": "/pictures/3.jpg", "alt": "Image 1"},
-    {"src": "/pictures/4.jpg", "alt": "Image 1"},
+    {"src": "/pictures/4.png", "alt": "Image 1"},
     {"src": "/pictures/5.jpg", "alt": "Image 1"},
     {"src": "/pictures/6.jpg", "alt": "Image 1"},
-    {"src": "/pictures/7.jpg", "alt": "Image 1"},
-    {"src": "/pictures/8.jpg", "alt": "Image 1"},
-    {"src": "/pictures/9.jpg", "alt": "Image 1"}
+    {"src": "/pictures/7.png", "alt": "Image 1"},
+    {"src": "/pictures/8.png", "alt": "Image 1"},
+    {"src": "/pictures/9.jpg", "alt": "Image 1"},
+    {"src": "/pictures/10.png", "alt": "Image 1"}
   ]
