@@ -5,6 +5,7 @@ import Carousel from "@/components/Carousel";
 import images from "@/public/prev_images.json"
 import TeamComponent from "@/components/Teams";
 import Panelists from "@/components/Panelists";
+import BusRoutes from "@/components/busRoutes";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
           <TeamComponent />
           {/* <Panelists /> */}
           <Carousel images={images} />
+          <BusRoutes />
           <FAQ />
     </main>
   );

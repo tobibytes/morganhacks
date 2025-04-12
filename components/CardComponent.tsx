@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Linkedin, Mail } from 'lucide-react';
-import { useRouter } from 'next/navigation';
 
 interface TeamMemberProps {
   name: string;
@@ -17,7 +16,6 @@ interface TeamMemberProps {
 
 export default function CardComponent({ name, role, image, linkedin, color, index = 0 }: TeamMemberProps) {
   const [isHovered, setIsHovered] = useState(false);
-  const router = useRouter()
 
   return (
     <motion.div

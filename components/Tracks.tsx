@@ -122,8 +122,8 @@ export default function Tracks() {
         </DialogHeader>
         <DialogDescription className="mt-6">
           <span className="text-lg leading-relaxed text-white">{selectedTrack.description}</span>
-          <span className="mt-8 text-base text-gray-300">
-            <span className="font-semibold text-white">Recommended Resources:</span>
+          <div className="mt-8 text-base text-gray-300">
+            <p className="font-semibold text-white">Recommended Resources:</p>
             <ul className="list-disc pl-6 mt-2">
               {selectedTrack.resources.map((resource, index) => (
                 <li key={index} className="mt-2">
@@ -131,7 +131,7 @@ export default function Tracks() {
                 </li>
               ))}
             </ul>
-          </span>
+          </div>
         </DialogDescription>
       </DialogContent>
     </Dialog>
