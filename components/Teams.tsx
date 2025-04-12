@@ -75,10 +75,10 @@ const teamMembers = [
     color: "bg-brown-500"
   },
   {
-    name: "Stephanie",
+    name: "Stephanie Adeoye ",
     role: "Registration Team",
     image: "/team/stephanie.jpg",
-    linkedin: "https://linkedin.com/in/skips-yeti",
+    linkedin: "https://www.linkedin.com/in/stephanie-adeoye-2a3b70291",
     color: "bg-gray-200"
   },
   {
