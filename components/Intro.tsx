@@ -59,96 +59,75 @@ export default function HackathonIntro() {
   }
 
   return (
-    <div className="relative w-full bg-cover bg-center py-12 text-white">
-      <div className="absolute inset-0 bg-opacity-70"></div>
-      <motion.div
-        className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8"
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-      >
-        <div className="text-center">
-          <motion.div variants={itemVariants} className="mb-4 text-5xl font-extrabold tracking-tight text-blue-400 sm:text-6xl">
-            <TypeAnimation
-              sequence={[
-                'Morgan Hacks 2025',
-              ]}
-              wrapper="h1"
-              speed={50}
-              cursor={false}
-            />
-          </motion.div>
-          <motion.div variants={itemVariants} className="mb-8 text-2xl font-medium text-green-300">
-            <TypeAnimation
-              sequence={[
-                'Where Regular Coders Become Extraordinary Hackers!',
-              ]}
-              wrapper="p"
-              speed={50}
-              cursor={false}
-            />
-          </motion.div>
-          <motion.div
-            className="mb-8 flex justify-center space-x-4"
-            variants={itemVariants}
-          >
-            <Card className="bg-opacity-80 backdrop-blur-sm">
-              <CardContent className="flex items-center p-4">
-                <Coffee className="mr-2 h-6 w-6 text-yellow-400" />
-                <span className="text-lg font-semibold">48 Hours</span>
-              </CardContent>
-            </Card>
-            <Card className="bg-opacity-80 backdrop-blur-sm">
-              <CardContent className="flex items-center p-4">
-                <Users className="mr-2 h-6 w-6 text-pink-400" />
-                <span className="text-lg font-semibold">100+ Hackers</span>
-              </CardContent>
-            </Card>
-            <Card className="bg-opacity-80 backdrop-blur-sm">
-              <CardContent className="flex items-center p-4">
-                <Code className="mr-2 h-6 w-6 text-green-400" />
-                <span className="text-lg font-semibold">Workshops</span>
-              </CardContent>
-            </Card>
-          </motion.div>
-          <motion.div
-            className="mb-8 text-3xl font-bold text-yellow-300"
-            variants={itemVariants}
-          >
-            <p className="mb-2">Countdown:</p>
-            <div className="flex justify-center space-x-4">
-              {Object.entries(timeLeft).map(([unit, value]) => (
-                <div key={unit} className="flex flex-col items-center">
-                  <span className="text-4xl">{value}</span>
-                  <span className="text-sm">{unit}</span>
-                </div>
-              ))}
+<div className="relative w-full bg-cover bg-center py-12 text-white">
+  <div className="absolute inset-0 bg-opacity-70"></div>
+  <motion.div
+    className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8"
+    initial="hidden"
+    animate="visible"
+    variants={containerVariants}
+  >
+    <div className="text-center">
+      <motion.div variants={itemVariants} className="mb-4 text-4xl sm:text-6xl font-extrabold tracking-tight text-blue-400">
+        <TypeAnimation sequence={['Morgan Hacks 2025']} wrapper="h1" speed={50} cursor={false} />
+      </motion.div>
+
+      <motion.div variants={itemVariants} className="mb-8 text-xl sm:text-2xl font-medium text-green-300">
+        <TypeAnimation sequence={['Where Regular Coders Become Extraordinary Hackers!']} wrapper="p" speed={50} cursor={false} />
+      </motion.div>
+
+      <motion.div className="mb-8 flex flex-col sm:flex-row justify-center items-center sm:space-x-4 space-y-4 sm:space-y-0" variants={itemVariants}>
+        <Card className="bg-opacity-80 backdrop-blur-sm w-64">
+          <CardContent className="flex items-center justify-center p-4">
+            <Coffee className="mr-2 h-6 w-6 text-yellow-400" />
+            <span className="text-lg font-semibold">48 Hours</span>
+          </CardContent>
+        </Card>
+        <Card className="bg-opacity-80 backdrop-blur-sm w-64">
+          <CardContent className="flex items-center justify-center p-4">
+            <Users className="mr-2 h-6 w-6 text-pink-400" />
+            <span className="text-lg font-semibold">100+ Hackers</span>
+          </CardContent>
+        </Card>
+        <Card className="bg-opacity-80 backdrop-blur-sm w-64">
+          <CardContent className="flex items-center justify-center p-4">
+            <Code className="mr-2 h-6 w-6 text-green-400" />
+            <span className="text-lg font-semibold">Workshops</span>
+          </CardContent>
+        </Card>
+      </motion.div>
+
+      <motion.div className="mb-8 text-2xl sm:text-3xl font-bold text-yellow-300" variants={itemVariants}>
+        <p className="mb-2">Countdown:</p>
+        <div className="flex flex-wrap justify-center gap-4">
+          {Object.entries(timeLeft).map(([unit, value]) => (
+            <div key={unit} className="flex flex-col items-center w-20">
+              <span className="text-3xl sm:text-4xl">{value}</span>
+              <span className="text-sm capitalize">{unit}</span>
             </div>
-          </motion.div>
-          <motion.div
-            className="flex justify-center space-x-4"
-            variants={itemVariants}
-          >
-            <a href="https://www.jotform.com/form/240934884390162" target="_blank">
-              <Button
-                size="lg"
-                className="bg-[#60A5FA] text-white hover:bg-blue-700 transition-all duration-300"
-              >
-                Register Now
-              </Button>
-            </a>
-            <a href="mailto:morganhacks2022@gmail.com?subject=Learn%20More%20About%20MorganHacks&body=Hello%20there%20i%20would%20love%20to%20learn%20more%20about%20morganhacks." target="_blank">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-green-400 text-green-400 hover:bg-green-400 hover:text-white transition-all duration-300"
-              >
-                Learn More
-              </Button>
-            </a>
-          </motion.div>
+          ))}
         </div>
       </motion.div>
+
+      <motion.div className="flex flex-col sm:flex-row justify-center items-center gap-4" variants={itemVariants}>
+        <a href="https://www.jotform.com/form/240934884390162" target="_blank">
+          <Button size="lg" className="bg-[#60A5FA] text-white hover:bg-blue-700 transition-all duration-300 w-48 sm:w-auto">
+            Register Now
+          </Button>
+        </a>
+        <a href="mailto:morganhacks2022@gmail.com?subject=Learn%20More%20About%20MorganHacks&body=Hello%20there%20i%20would%20love%20to%20learn%20more%20about%20morganhacks." target="_blank">
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-green-400 text-green-400 hover:bg-green-400 hover:text-white transition-all duration-300 w-48 sm:w-auto"
+          >
+            Learn More
+          </Button>
+        </a>
+      </motion.div>
     </div>
+  </motion.div>
+</div>
+
   )
 }
