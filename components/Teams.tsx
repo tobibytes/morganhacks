@@ -90,7 +90,7 @@ const teamMembers = [
   },
   {
     name: "Jomiloju",
-    role: "Sponsorship Team",
+    role: "Media Team",
     image: "/team/jk.jpg",
     linkedin: "https://www.linkedin.com/in/oluwajomiloju-king/",
     color: "bg-gray-200"
