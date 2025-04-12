@@ -77,7 +77,7 @@ const teamMembers = [
   {
     name: "Stephanie",
     role: "Registration Team",
-    image: "/team/chelsea.jpg",
+    image: "/team/stephanie.jpg",
     linkedin: "https://linkedin.com/in/skips-yeti",
     color: "bg-gray-200"
   },
