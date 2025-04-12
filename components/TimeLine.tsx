@@ -1,60 +1,136 @@
+'use client'
+
+import {MapPin, Clock, Users } from 'lucide-react'
 
 
-export default function Timeline() {
+export interface ScheduleEvent {
+  time: string
+  item: string
+  responsibility?: string
+  venue?: string
+}
 
+export interface DaySchedule {
+  date: string
+  events: ScheduleEvent[]
+}
 
-  const timelineEvents = [
-    { time: '8:00 AM', event: 'Check-in, Breakfast & Networking', description: 'Registration and meet the sponsors.' },
-    { time: '9:00 AM', event: 'Sponsorship Fair', description: 'Engage with our amazing sponsors.' },
-    { time: '10:30 AM', event: 'Opening Ceremony', description: 'Welcome to Morgan Hacks!' },
-    { time: '10:35 AM', event: 'Possible President Address', description: 'Special message from the president.' },
-    { time: '10:45 AM', event: 'Featured Speech/Presentation', description: 'Insights from our keynote speaker.' },
-    { time: '10:55 AM', event: 'Panel Session', description: 'Hear from industry experts.' },
-    { time: '11:30 AM', event: 'Hackathon Breakdown', description: 'Learn about the challenges and rules.' },
-    { time: '11:40 AM', event: 'Team Forming', description: 'Get to know your teammates!' },
-    { time: '12:00 PM', event: 'Hacking Begins', description: 'Start your engines!' },
-    { time: '1:00 PM', event: 'Workshop 1', description: 'Learn and build with sponsors.' },
-    { time: '1:00 PM', event: 'Lunch Break', description: 'Refuel with some grub.' },
-    { time: '4:00 PM', event: 'Workshop 2', description: 'Level up your skills!' },
-    { time: '5:00 PM', event: 'Dinner Served', description: 'Keep that energy up!' },
-    { time: '8:00 AM', event: 'Breakfast Served', description: 'Rise and shine, hackers!' },
-    { time: '11:00 AM', event: 'Pitch Practice', description: 'Get feedback from mentors.' },
-    { time: '12:00 PM', event: 'Lunch Break', description: 'Recharge for the final stretch.' },
-    { time: '1:00 PM', event: 'Submission Deadline', description: 'Submit your projects on Devpost.' },
-    { time: '1:30 PM', event: 'Presentations (Round 1 Judging)', description: 'Showcase your work to the judges.' },
-    { time: '3:45 PM', event: 'Top 6 Teams Announced', description: 'Find out who made it to the finals!' },
-    { time: '4:00 PM', event: 'Round 2 Judging', description: 'Final presentations for top teams.' },
-    { time: '5:05 PM', event: 'Closing Speech', description: 'Thank you for participating!' },
-    { time: '5:15 PM', event: 'Winners Announced', description: 'Celebrate the champions.' },
-    { time: '5:45 PM', event: 'Networking Drinks & Dinner', description: 'End the event with good food and great connections.' }
-]
+export interface ScheduleData {
+  day1: DaySchedule
+  day2: DaySchedule
+  fun: string[]
+}
 
+const schedule: ScheduleData = {
+  day1: {
+    date: "Saturday, April 26th, 2025",
+    events: [
+      { time: "6:00 AM", item: "Organizers Arrive", responsibility: "All Teams" },
+      { time: "7:00 AM", item: "Volunteers Arrive / Logistics / Registration", responsibility: "Operations Team" },
+      { time: "8:00 AM – 10:30 AM", item: "Check-in, Breakfast & Network with Sponsors", responsibility: "Registration & Volunteer Team", venue: "First Floor" },
+      { time: "9:00 AM – 10:30 AM", item: "Sponsorship Fair", responsibility: "Sponsors" },
+      { time: "10:30 AM – 11:40 AM", item: "Opening Ceremony, President Address, Keynote, Panel, Breakdown, Team Forming", responsibility: "All Teams + Guests", venue: "Auditorium: 104" },
+      { time: "12:00 PM", item: "Coding Begins", venue: "Study Rooms" },
+      { time: "1:00 PM – 2:00 PM", item: "Workshop 1 – Y3K / Northrop Grumman / Capital One", responsibility: "Sponsors", venue: "Classrooms" },
+      { time: "1:00 PM – 3:00 PM", item: "Lunch Served", responsibility: "Logistics / Volunteers", venue: "First Floor" },
+      { time: "4:00 PM – 5:00 PM", item: "Workshop 2 – Northrop Grumman & others", responsibility: "Sponsors", venue: "Classrooms" },
+      { time: "5:00 PM – 8:00 PM", item: "Dinner Served", responsibility: "Logistics / Volunteers", venue: "First Floor" },
+      { time: "All Day", item: "Snacks Available", venue: "First Floor" },
+    ],
+  },
+  day2: {
+    date: "Sunday, April 27th, 2025",
+    events: [
+      { time: "8:00 AM – 10:00 AM", item: "Breakfast Served", responsibility: "Logistics / Volunteers", venue: "First Floor" },
+      { time: "11:00 AM", item: "Pitch Practice", responsibility: "Mentors", venue: "Study Rooms" },
+      { time: "12:00 PM", item: "Lunch Served", responsibility: "Logistics / Volunteers", venue: "First Floor" },
+      { time: "1:00 PM", item: "Submission Deadline", venue: "Devpost" },
+      { time: "1:30 PM – 3:30 PM", item: "Round 1 Judging", responsibility: "Judges", venue: "Judging Rooms" },
+      { time: "3:45 PM", item: "Start of Closing Ceremony & Top 6 Teams Announced", venue: "Auditorium: 104" },
+      { time: "3:50 PM – 4:00 PM", item: "Top 6 Teams Final Pitch Practice" },
+      { time: "4:00 PM – 5:00 PM", item: "Round 2 Judging", responsibility: "Everyone", venue: "Auditorium: 104" },
+      { time: "5:05 PM – 5:15 PM", item: "Resume Closing Ceremony", responsibility: "Judges", venue: "Breakout Room" },
+      { time: "5:15 PM – 5:45 PM", item: "Winners Announced" },
+      { time: "5:45 PM – 6:30 PM", item: "Networking Drinks & Dinner" },
+    ],
+  },
+  fun: [
+    "Scavenger Hunts",
+    "Puzzle Games",
+    "Karaoke ✅",
+    "Charades",
+    "Icebreakers (We're Not Really Strangers) ✅",
+    "Cup Stack"
+  ]
+}
 
+export default function EventSchedule() {
   return (
-    <div className="relative min-h-screen w-full bg-cover bg-center py-12 text-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-8 text-center text-4xl font-bold text-purple-300 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Morgan Hacks Timeline</h2>
-          <div className="relative">
-            <div className="absolute left-1/2 h-full w-1 -translate-x-1/2 transform bg-blue-400"></div>
+    <section className="py-20 bg-[#0e0e17] text-white">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-center text-4xl font-extrabold mb-16 text-purple-400">MorganHacks Schedule</h2>
 
-            {timelineEvents.map((event, index) => (
-              <div key={index} className={`mb-8 flex w-full items-center justify-between ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
-                <div className="w-5/12"></div>
-                <div className="z-20 flex h-8 w-8 items-center justify-center rounded-full bg-green-400 text-center font-bold shadow-xl">
-                  <div className="h-4 w-4 rounded-full bg-purple-600"></div>
+        {(['day1', 'day2'] as const).map((key, idx) => {
+          const label = key === 'day1' ? 'Day 1' : 'Day 2'
+          const day = schedule[key]
+
+          return (
+            <div key={idx} className="mb-24">
+              <h3 className="text-2xl font-bold text-blue-400 mb-8 border-l-4 border-blue-500 pl-4">{label} • {day.date}</h3>
+
+              <div className="relative">
+                {/* Vertical center line */}
+                <div className="absolute left-1/2 top-0 h-full w-[2px] bg-purple-600/20 -translate-x-1/2 z-0" />
+
+                <div className="grid md:grid-cols-2 gap-y-12 gap-x-6 relative z-10">
+                  {day.events.map((event, i) => (
+                    <div key={i} className={`relative p-5 rounded-xl bg-[#181825] border border-white/10 shadow-md`}>
+                      <div className="flex flex-col gap-2">
+                        <div className="flex justify-between items-start">
+                          <h4 className="text-lg font-bold text-green-300">{event.item}</h4>
+                          <span className="text-sm text-yellow-300 flex items-center gap-1">
+                            <Clock className="w-4 h-4" />
+                            {event.time}
+                          </span>
+                        </div>
+
+                        {event.responsibility && (
+                          <div className="text-sm text-white/80 flex items-center gap-1">
+                            <Users className="w-4 h-4 text-white/50" />
+                            {event.responsibility}
+                          </div>
+                        )}
+
+                        {event.venue && (
+                          <div className="text-sm text-white/80 flex items-center gap-1">
+                            <MapPin className="w-4 h-4 text-white/50" />
+                            {event.venue}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <div className="w-5/12">
-                  <div className="rounded-lg bg-opacity-80 p-4 shadow-xl transition-all duration-300 ease-in-out hover:scale-105 hover:bg-opacity-100" 
-                       style={{backgroundColor: 'rgba(76, 29, 149, 0.8)'}}>
-                    <h3 className="mb-1 text-lg font-bold text-green-300">{event.time}</h3>
-                    <h4 className="mb-2 text-xl font-bold text-blue-300">{event.event}</h4>
-                    <p className="text-sm text-gray-200">{event.description}</p>
-                  </div>
-                </div>
+              </div>
+            </div>
+          )
+        })}
+
+        {/* Redesigned Fun Activities */}
+        <div className="mt-24">
+          <h3 className="text-2xl font-bold text-pink-400 mb-6 text-center">🎉 Fun Activities</h3>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {schedule.fun.map((activity, i) => (
+              <div
+                key={i}
+                className="bg-[#1e1e2a] border border-white/10 rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-all"
+              >
+                <p className="text-white/90 font-medium text-sm">{activity}</p>
               </div>
             ))}
           </div>
         </div>
-    </div>
+      </div>
+    </section>
   )
 }
