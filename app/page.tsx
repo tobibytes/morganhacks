@@ -6,6 +6,7 @@ import images from "@/public/prev_images.json"
 import TeamComponent from "@/components/Teams";
 import Panelists from "@/components/Panelists";
 import BusRoutes from "@/components/busRoutes";
+import Sponsors from "@/components/Sponsors";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <HackathonIntro />
           <Tracks />
           <TeamComponent />
+          <Sponsors />
           {/* <Panelists /> */}
           <Carousel images={images} />
           <BusRoutes />
