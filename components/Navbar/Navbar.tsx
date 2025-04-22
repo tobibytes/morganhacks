@@ -173,16 +173,17 @@ export default function NavBar({ children }: { children: React.ReactNode }) {
         </motion.div>
       )}
 
-          <a
-            href="https://form.jotform.com/251074394248157"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block px-6 py-2 rounded-md text-center text-base font-medium bg-blue-500 text-white hover:bg-blue-600 transition-all"
-            >
-      <marquee scrollAmount={10}>
-            Bus Routes Rsvp!
-            </marquee>
-          </a>
+<a
+  href="https://form.jotform.com/251074394248157"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="relative block px-6 py-2 rounded-md text-center text-base font-medium bg-blue-500 text-white overflow-hidden"
+>
+  <div className="animate-marquee whitespace-nowrap">
+    Bus Routes RSVP! 🚍 Bus Routes RSVP! 🚍 Bus Routes RSVP! 🚍
+  </div>
+</a>
+
 
       {/* Progress Bar */}
       <motion.div className="progress-bar" style={{ scaleX: scrollYProgress }} />
