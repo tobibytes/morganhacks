@@ -56,12 +56,12 @@ export default function CardComponent({ name, role, image, linkedin, color, inde
             >
               <Linkedin className="w-5 h-5 text-white" />
             </a> 
-            <a
+            {/* <a
               href="#"
               className="p-2 bg-red-500 rounded-full hover:bg-red-600 transition-colors duration-300"
             >
               <Mail className="w-5 h-5 text-white" />
-            </a>
+            </a> */}
           </motion.div>
         </div>
       </div>

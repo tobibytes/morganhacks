@@ -16,7 +16,7 @@ const busRoutes = [
   },
   {
     name: 'Route 3',
-    path: ['University of District Columbia', 'Howard University', 'Morgan State University'],
+    path: ['Howard University', 'Morgan State University'],
     color: 'from-purple-400 to-purple-600',
   },
 ]

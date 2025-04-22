@@ -80,13 +80,13 @@ export default function HackathonIntro() {
         <Card className="bg-opacity-80 backdrop-blur-sm w-64">
           <CardContent className="flex items-center justify-center p-4">
             <Coffee className="mr-2 h-6 w-6 text-yellow-400" />
-            <span className="text-lg font-semibold">48 Hours</span>
+            <span className="text-lg font-semibold">36 Hours</span>
           </CardContent>
         </Card>
         <Card className="bg-opacity-80 backdrop-blur-sm w-64">
           <CardContent className="flex items-center justify-center p-4">
             <Users className="mr-2 h-6 w-6 text-pink-400" />
-            <span className="text-lg font-semibold">100+ Hackers</span>
+            <span className="text-lg font-semibold">150+ Hackers</span>
           </CardContent>
         </Card>
         <Card className="bg-opacity-80 backdrop-blur-sm w-64">
@@ -110,21 +110,31 @@ export default function HackathonIntro() {
       </motion.div>
 
       <motion.div className="flex flex-col sm:flex-row justify-center items-center gap-4" variants={itemVariants}>
-        <a href="https://www.jotform.com/form/240934884390162" target="_blank">
-          <Button size="lg" className="bg-[#60A5FA] text-white hover:bg-blue-700 transition-all duration-300 w-48 sm:w-auto">
-            Register Now
-          </Button>
-        </a>
-        <a href="mailto:morganhacks2022@gmail.com?subject=Learn%20More%20About%20MorganHacks&body=Hello%20there%20i%20would%20love%20to%20learn%20more%20about%20morganhacks." target="_blank">
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-green-400 text-green-400 hover:bg-green-400 hover:text-white transition-all duration-300 w-48 sm:w-auto"
-          >
-            Learn More
-          </Button>
-        </a>
-      </motion.div>
+  <a href="https://www.jotform.com/form/240934884390162" target="_blank">
+    <Button size="lg" className="bg-[#60A5FA] text-white hover:bg-blue-700 transition-all duration-300 w-48 sm:w-auto">
+      Register Now
+    </Button>
+  </a>
+  <a href="https://form.jotform.com/251074394248157" target="_blank">
+    <Button
+      size="lg"
+      variant="outline"
+      className="border-green-400 text-green-400 hover:bg-green-400 hover:text-white transition-all duration-300 w-48 sm:w-auto"
+    >
+      Bus Routes RSVP!
+    </Button>
+  </a>
+  <a href="https://form.jotform.com/250966057383162" target="_blank">
+    <Button
+      size="lg"
+      variant="outline"
+      className="border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-white transition-all duration-300 w-48 sm:w-auto"
+    >
+      RSVP Here!
+    </Button>
+  </a>
+</motion.div>
+
     </div>
   </motion.div>
 </div>

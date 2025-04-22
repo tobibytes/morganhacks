@@ -36,6 +36,10 @@ const faqs = [
   {
     question: "Is there a code of conduct?",
     answer: "Yes, we follow the MLH code of coduct. You can find it at https://mlh.link/CodeOfConduct"
+  },
+  {
+    question: "Do I need to apply to attend?",
+    answer: "Nope—Morgan Hacks doesn’t do acceptances or rejections. If you’re a student, you’re welcome! Just register using the RSVP form on our website and you’re good to go."
   }
 ]
 

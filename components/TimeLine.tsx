@@ -20,7 +20,6 @@ export interface ScheduleData {
   day2: DaySchedule
   fun: string[]
 }
-
 const schedule: ScheduleData = {
   day1: {
     date: "Saturday, April 26th, 2025",
@@ -29,11 +28,14 @@ const schedule: ScheduleData = {
       { time: "7:00 AM", item: "Volunteers Arrive / Logistics / Registration", responsibility: "Operations Team" },
       { time: "8:00 AM – 10:30 AM", item: "Check-in, Breakfast & Network with Sponsors", responsibility: "Registration & Volunteer Team", venue: "First Floor" },
       { time: "9:00 AM – 10:30 AM", item: "Sponsorship Fair", responsibility: "Sponsors" },
-      { time: "10:30 AM – 11:40 AM", item: "Opening Ceremony, President Address, Keynote, Panel, Breakdown, Team Forming", responsibility: "All Teams + Guests", venue: "Auditorium: 104" },
-      { time: "12:00 PM", item: "Coding Begins", venue: "Study Rooms" },
-      { time: "1:00 PM – 2:00 PM", item: "Workshop 1 – Y3K / Northrop Grumman / Capital One", responsibility: "Sponsors", venue: "Classrooms" },
+      { time: "10:30 AM – 11:30 AM", item: "Opening Ceremony, President Address, Keynote, Panel", responsibility: "All Teams + Guests", venue: "Auditorium: 104" },
+      { time: "11:30 AM – 12:15 PM", item: "Hackathon Breakdown & Challenge Statement", responsibility: "All Teams", venue: "Auditorium: 104" },
+      { time: "12:30 PM", item: "Coding Begins", venue: "Study Rooms" },
+      { time: "1:00 PM – 2:00 PM", item: "Workshop 1 – Northrop Grumman: A Day in the Life of an Engineer Panel with Yeneneh Ketema", responsibility: "Northrop Grumman", venue: "Room 208" },
       { time: "1:00 PM – 3:00 PM", item: "Lunch Served", responsibility: "Logistics / Volunteers", venue: "First Floor" },
-      { time: "4:00 PM – 5:00 PM", item: "Workshop 2 – Northrop Grumman & others", responsibility: "Sponsors", venue: "Classrooms" },
+      { time: "4:00 PM – 5:00 PM", item: "Workshop – Northrop Grumman: Building Your Web App with Python, Flask, and NodeJS", responsibility: "Northrop Grumman", venue: "Room 208" },
+      { time: "4:00 PM – 5:00 PM", item: "Workshop – Wells Fargo: Speaking with Influence: Crafting a Memorable Pitch", responsibility: "Wells Fargo", venue: "Room 316" },
+      { time: "4:00 PM – 5:00 PM", item: "Workshop – Microsoft: CTF Workshop for MorganHacks using KC7Cyber Platform", responsibility: "Microsoft", venue: "Room 112" },
       { time: "5:00 PM – 8:00 PM", item: "Dinner Served", responsibility: "Logistics / Volunteers", venue: "First Floor" },
       { time: "All Day", item: "Snacks Available", venue: "First Floor" },
     ],
@@ -62,7 +64,8 @@ const schedule: ScheduleData = {
     "Icebreakers (We're Not Really Strangers) ✅",
     "Cup Stack"
   ]
-}
+};
+
 
 export default function EventSchedule() {
   return (

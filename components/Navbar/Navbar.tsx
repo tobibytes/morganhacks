@@ -99,6 +99,11 @@ export default function NavBar({ children }: { children: React.ReactNode }) {
                   Register
                 </div>
               </a>
+              {/* <a href="https://form.jotform.com/251074394248157" target="_blank">
+                <div className="cursor-pointer ml-4 px-6 py-2 rounded-md text-sm font-medium bg-[#60A5FA] text-white transition-all duration-300 hover:bg-blue-600 shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]">
+                  Bus Routes RSVP!
+                </div>
+              </a> */}
             </motion.div>
 
             {/* MLH Badge */}
@@ -168,6 +173,17 @@ export default function NavBar({ children }: { children: React.ReactNode }) {
         </motion.div>
       )}
 
+          <a
+            href="https://form.jotform.com/251074394248157"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block px-6 py-2 rounded-md text-center text-base font-medium bg-blue-500 text-white hover:bg-blue-600 transition-all"
+            >
+      <marquee scrollAmount={10}>
+            Bus Routes Rsvp!
+            </marquee>
+          </a>
+
       {/* Progress Bar */}
       <motion.div className="progress-bar" style={{ scaleX: scrollYProgress }} />
 
@@ -193,9 +209,8 @@ export default function NavBar({ children }: { children: React.ReactNode }) {
 
         {/* Social Icons */}
         <div className="sm:flex absolute bottom-4 left-1/2 transform -translate-x-1/2 space-x-5 z-50">
-          <SocialIcon url="https://instagram.com" />
-          <SocialIcon url="https://facebook.com" />
-          <SocialIcon url="https://x.com" />
+          <SocialIcon url="https://www.instagram.com/morgan.hacks?igsh=MWZ1YnZuazFjbHFucw==" />
+          <SocialIcon url="https://youtube.com/@morganhacks?si=ddtAVIHc8wChiEFW" />
         </div>
       </main>
     </motion.nav>

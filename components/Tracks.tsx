@@ -25,8 +25,9 @@ export default function Tracks() {
       title: "Robotics",
       description: "Create innovative solutions combining software and hardware. Learn about automation, AI, and embedded systems.",
       resources: [
-        { name: "Coursera's Robotics Specialization", link: "https://www.coursera.org/specializations/robotics" },
-        { name: "MIT OpenCourseWare", link: "https://ocw.mit.edu/courses/mechanical-engineering/2-12-introduction-to-robotics-fall-2005/" }
+        { name: "Robot Operating System", link: "https://www.ros.org/" },
+        { name: "Boston Dynamics", link: "https://bostondynamics.com/webinars/developer-spotlight/" },
+        { name: "Nvidia Isaac Ros", link: "https://developer.nvidia.com/isaac/ros" }
       ],
       icon: <Cpu className="w-8 h-8 text-green-400" />, 
       difficulty: "All levels",
@@ -36,8 +37,11 @@ export default function Tracks() {
       title: "Education",
       description: "Develop projects addressing educational challenges using technology, such as e-learning platforms and AI tutors.",
       resources: [
-        { name: "Khan Academy", link: "https://www.khanacademy.org/" },
-        { name: "EdX's EdTech Programs", link: "https://www.edx.org/learn/education" }
+        { name: "Canvas API", link: "https://canvas.instructure.com/doc/api/" },
+        { name: "Manim", link: "https://github.com/3b1b/manim" },
+        { name: "Google Classroom", link: "https://developers.google.com/classroom" },
+        { name: "Blackboard", link: "https://developer.blackboard.com/portal/displayApi" },
+        { name: "Vimeo", link: "https://developer.vimeo.com/" },
       ],
       icon: <Leaf className="w-8 h-8 text-yellow-400" />,
       difficulty: "All levels",
@@ -47,8 +51,11 @@ export default function Tracks() {
       title: "Entertainment",
       description: "Create interactive media, games, or VR experiences that engage and inspire audiences.",
       resources: [
-        { name: "Unity Learn", link: "https://learn.unity.com/" },
-        { name: "Udemy's Game Development Courses", link: "https://www.udemy.com/topic/game-development/" }
+        { name: "Unity", link: "https://unity.com/" },
+        { name: "Unreal Engine", link: "https://www.unrealengine.com/en-US" },
+        { name: "Oculus", link: "https://developer.oculus.com/" },
+        { name: "Twitch Tv", link: "https://dev.twitch.tv/" },
+        { name: "Spotify", link: "https://developer.spotify.com/" },
       ],
       icon: <Zap className="w-8 h-8 text-red-400" />,
       difficulty: "All Levels",
@@ -58,8 +65,11 @@ export default function Tracks() {
       title: "Health",
       description: "Develop solutions to improve healthcare, such as wearable devices, telemedicine apps, and AI diagnostics.",
       resources: [
-        { name: "Stanford's AI in Healthcare", link: "https://ai100.stanford.edu/" },
-        { name: "Harvard's Biomedical Engineering", link: "https://www.seas.harvard.edu/bioengineering" }
+        { name: "Spoonacular API", link: "https://spoonacular.com/food-api/docs" },
+        { name: "World Health Organization", link: "https://www.who.int/data/gho/info/gho-odata-api" },
+        { name: "World Health Organization", link: "https://www.who.int/data/gho/info/gho-odata-api" },
+        { name: "Drugbank", link: "https://docs.drugbank.com/v1/#introduction" },
+        { name: "Human Api", link: "https://www.humanapi.co/" },
       ],
       icon: <Globe className="w-8 h-8 text-gray-400" />,
       difficulty: "All Levels",
@@ -69,8 +79,12 @@ export default function Tracks() {
       title: "Sustainability",
       description: "Innovate in renewable energy, smart agriculture, and environmental conservation using tech.",
       resources: [
-        { name: "Coursera's Renewable Energy", link: "https://www.coursera.org/specializations/renewable-energy" },
-        { name: "Udacity's AI for Earth", link: "https://www.udacity.com/course/ai-for-earth--ud987" }
+        { name: "Ecosia", link: "https://www.ecosia.org/?c=en" },
+        { name: "Google Maps", link: "https://developers.google.com/maps" },
+        { name: "My Climate", link: "https://www.myclimate.org/" },
+        { name: "Carbon Interface", link: "https://docs.carboninterface.com/#/" },
+        { name: "Electricity Map", link: "https://electricitymap.org/" },
+        { name: "Climatiq", link: "https://www.climatiq.io/" },
       ],
       icon: <Brain className="w-8 h-8 text-purple-400" />,
       difficulty: "All Levels",
@@ -80,8 +94,10 @@ export default function Tracks() {
       title: "New Frontiers",
       description: "Explore cutting-edge tech such as quantum computing, space tech, and biotech.",
       resources: [
-        { name: "IBM's Quantum Computing", link: "https://quantum-computing.ibm.com/" },
-        { name: "NASA's Space Apps Challenges", link: "https://www.spaceappschallenge.org/" }
+        { name: "Tensorflow", link: "https://www.tensorflow.org/" },
+        { name: "Computer Vision", link: "https://opencv.org/" },
+        { name: "Blockchain", link: "https://ethereum.org/en/" },
+        { name: "ARCore", link: "https://developers.google.com/ar" },
       ],
       icon: <Star className="w-8 h-8 text-blue-400" />,
       difficulty: "All Levels",

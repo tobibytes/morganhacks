@@ -2,51 +2,51 @@
 
 import { motion } from 'framer-motion';
 import CardComponent from './CardComponent';
-
 const sponsors = [
   {
     name: "Capital One",
     role: "",
     image: "/sponsors/capitalone.jpg",
-    linkedin: "https://linkedin.com/in/mordecai-blue",
-    color: "bg-blue-500"
+    linkedin: "https://www.linkedin.com/company/capital-one",
+    color: "bg-red-600"
   },
   {
     name: "Goldman Sachs",
     role: "",
     image: "/sponsors/goldmansachs.jpg",
-    linkedin: "https://linkedin.com/in/mordecai-blue",
-    color: "bg-blue-500"
+    linkedin: "https://www.linkedin.com/company/goldman-sachs",
+    color: "bg-gold"
   },
   {
     name: "Microsoft",
     role: "",
     image: "/sponsors/microsoft.png",
-    linkedin: "https://linkedin.com/in/mordecai-blue",
-    color: "bg-blue-500"
+    linkedin: "https://www.linkedin.com/company/microsoft",
+    color: "bg-blue-600"
   },
   {
-    name: "M & T Bank",
-    role: "Tech enthusiast",
+    name: "M&T Bank",
+    role: "Tech Enthusiast",
     image: "/sponsors/mtb.png",
-    linkedin: "https://linkedin.com/in/mordecai-blue",
-    color: "bg-blue-500"
+    linkedin: "https://www.linkedin.com/company/m%26t-bank",
+    color: "bg-green-700"
   },
   {
     name: "Northrop Grumman",
     role: "",
     image: "/sponsors/northopgrumman.png",
-    linkedin: "https://linkedin.com/in/mordecai-blue",
-    color: "bg-blue-500"
+    linkedin: "https://www.linkedin.com/company/northrop-grumman-corporation",
+    color: "bg-gray-800"
   },
   {
     name: "Wells Fargo",
     role: "",
     image: "/sponsors/wellsfargo.png",
-    linkedin: "https://linkedin.com/in/mordecai-blue",
-    color: "bg-blue-500"
+    linkedin: "https://www.linkedin.com/company/wellsfargo",
+    color: "bg-red-700"
   },
 ];
+
 
 export default function Sponsors() {
 

@@ -8,28 +8,28 @@ const teamMembers = [
     name: "Heritage",
     role: "President",
     image: "/team/heritage.jpg",
-    linkedin: "https://linkedin.com/in/muscle-man",
+    linkedin: "https://www.linkedin.com/in/godsheritage/",
     color: "bg-green-500"
   },
   {
     name: "Anay Zaveri",
     role: "Vice President and Lead of Sponsorships and Partnerships",
     image: "/team/anay.jpg",
-    linkedin: "https://www.linkedin.com/in/anay-zaveri-b5ab941b3e",
+    linkedin: "https://www.linkedin.com/in/anay-zaveri-b5ab941b3/",
     color: "bg-blue-500"
   },
   {
-    name: "Iyinoluwa Grace Ayodele",
+    name: "Iyinoluwa Ayodele",
     role: "Operations Team",
     image: "/team/grace.jpg",
     linkedin: "http://www.linkedin.com/in/iyinoluwa-ayodele",
     color: "bg-blue-500"
   },
   {
-    name: "Sanae",
+    name: "Sanae Freeman",
     role: "Operations Team",
     image: "/team/sanae.jpg",
-    linkedin: "https://www.linkedin.com/in/mordecai-blue",
+    linkedin: "https://www.linkedin.com/in/sanae-freeman-98323419a/",
     color: "bg-blue-500"
   },
   {
@@ -40,19 +40,12 @@ const teamMembers = [
     color: "bg-blue-500"
   },
   {
-    name: "Tobi",
+    name: "Oluwatobi Olajide",
     role: "Technology Team",
     image: "/team/tobi.jpg",
     linkedin: "https://www.linkedin.com/in/oluwatobi-olajide",
     color: "bg-blue-500"
   },
-//   {
-//   name: "Teddy",
-//   role: "Technology Team",
-//   image: "https://media.istockphoto.com/id/1164586449/photo/i-dont-know-portrait-of-young-confused-man-in-white-t-shirt-standing-and-shrugging-shoulders.jpg?s=612x612&w=0&k=20&c=LbPsVG5ZGGitd6Vn3xElKfSWr9PmXHR5J3Qv2TNaAm4=",
-//   linkedin: "https://linkedin.com/in/pops-maellard",
-//   color: "bg-pink-200"
-// },
   {
     name: "Chelsea Minard",
     role: "Media + Marketing Lead",
@@ -61,21 +54,21 @@ const teamMembers = [
     color: "bg-blue-500"
   },
   {
-    name: "Adefikayo",
+    name: "Adefikayo Dipe",
     role: "Logistics Manager",
     image: "/team/fikayo.jpg",
-    linkedin: "https://linkedin.com/in/benson-dunwoody",
+    linkedin: "https://www.linkedin.com/in/adefikayodipe/",
     color: "bg-red-500"
   },
   {
-    name: "Olwasegun Soji-John",
+    name: "Oluwasegun Soji-John",
     role: "Registration Team",
     image: "/team/segun.jpg",
     linkedin: "https://www.linkedin.com/in/oluwasegun-soji-john/",
     color: "bg-brown-500"
   },
   {
-    name: "Stephanie Adeoye ",
+    name: "Stephanie Adeoye",
     role: "Registration Team",
     image: "/team/stephanie.jpg",
     linkedin: "https://www.linkedin.com/in/stephanie-adeoye-2a3b70291",
@@ -89,8 +82,8 @@ const teamMembers = [
     color: "bg-pink-200"
   },
   {
-    name: "Jomiloju",
-    role: "Media Team",
+    name: "Jomiloju King",
+    role: "Sponsorship Team",
     image: "/team/jk.jpg",
     linkedin: "https://www.linkedin.com/in/oluwajomiloju-king/",
     color: "bg-gray-200"
