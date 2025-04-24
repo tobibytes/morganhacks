@@ -5,31 +5,38 @@ import CardComponent from './CardComponent';
 
 const teamMembers = [
   {
-    name: "Mordecai Blue",
-    role: "Lead Engineer",
-    image: "https://media.istockphoto.com/id/1164586449/photo/i-dont-know-portrait-of-young-confused-man-in-white-t-shirt-standing-and-shrugging-shoulders.jpg?s=612x612&w=0&k=20&c=LbPsVG5ZGGitd6Vn3xElKfSWr9PmXHR5J3Qv2TNaAm4=",
-    linkedin: "https://linkedin.com/in/mordecai-blue",
+    name: "Markus Proctor",
+    role: "Panelists",
+    image: "/panelists/markus.jpeg",
+    // linkedin: "https://linkedin.com/in/mordecai-blue",
     color: "bg-blue-500"
   },
   {
-    name: "Mordecai Blue",
-    role: "Professor",
-    image: "https://media.istockphoto.com/id/1164586449/photo/i-dont-know-portrait-of-young-confused-man-in-white-t-shirt-standing-and-shrugging-shoulders.jpg?s=612x612&w=0&k=20&c=LbPsVG5ZGGitd6Vn3xElKfSWr9PmXHR5J3Qv2TNaAm4=",
-    linkedin: "https://linkedin.com/in/mordecai-blue",
+    name: "Obinna Okudo",
+    role: "Panelists",
+    image: "/panelists/obinna.jpg",
+    // linkedin: "https://linkedin.com/in/mordecai-blue",
     color: "bg-blue-500"
   },
   {
-    name: "Mordecai Blue",
-    role: "Lead Engineer",
-    image: "https://media.istockphoto.com/id/1164586449/photo/i-dont-know-portrait-of-young-confused-man-in-white-t-shirt-standing-and-shrugging-shoulders.jpg?s=612x612&w=0&k=20&c=LbPsVG5ZGGitd6Vn3xElKfSWr9PmXHR5J3Qv2TNaAm4=",
-    linkedin: "https://linkedin.com/in/mordecai-blue",
+    name: "Christian Martins",
+    role: "Panelists",
+    image: "/panelists/christain.jpeg",
+    // linkedin: "https://linkedin.com/in/mordecai-blue",
     color: "bg-blue-500"
   },
   {
-    name: "Mordecai Blue",
-    role: "Tech enthusiast",
-    image: "https://media.istockphoto.com/id/1164586449/photo/i-dont-know-portrait-of-young-confused-man-in-white-t-shirt-standing-and-shrugging-shoulders.jpg?s=612x612&w=0&k=20&c=LbPsVG5ZGGitd6Vn3xElKfSWr9PmXHR5J3Qv2TNaAm4=",
-    linkedin: "https://linkedin.com/in/mordecai-blue",
+    name: "Jeffrey Scruggs",
+    role: "Panelists",
+    image: "/panelists/jeff.jpg",
+    // linkedin: "https://linkedin.com/in/mordecai-blue",
+    color: "bg-blue-500"
+  },
+  {
+    name: "Marcus Winkfield",
+    role: "Panelists",
+    image: "/panelists/marcus.PNG",
+    // linkedin: "https://linkedin.com/in/mordecai-blue",
     color: "bg-blue-500"
   }
 ];

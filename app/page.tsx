@@ -15,7 +15,7 @@ export default function Home() {
           <Tracks />
           <TeamComponent />
           <Sponsors />
-          {/* <Panelists /> */}
+          <Panelists />
           <Carousel images={images} />
           <BusRoutes />
           <FAQ />

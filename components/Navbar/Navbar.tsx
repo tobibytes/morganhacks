@@ -130,7 +130,6 @@ export default function NavBar({ children }: { children: React.ReactNode }) {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -142,7 +141,6 @@ export default function NavBar({ children }: { children: React.ReactNode }) {
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
       {isOpen && (
         <motion.div
           initial={{ opacity: 0 }}

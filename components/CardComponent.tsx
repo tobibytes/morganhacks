@@ -9,7 +9,7 @@ interface TeamMemberProps {
   name: string;
   role: string;
   image: string;
-  linkedin: string;
+  linkedin?: string;
   color: string;
   type?: string
   index?: number;
@@ -48,14 +48,14 @@ export default function CardComponent({ name, role, image, linkedin, color, inde
             animate={{ opacity: isHovered ? 1 : 0 }}
             className="flex gap-4"
           >
-            <a
+            {linkedin && <a
               href={linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-blue-500 rounded-full hover:bg-blue-600 transition-colors duration-300"
             >
               <Linkedin className="w-5 h-5 text-white" />
-            </a> 
+            </a>  }
             {/* <a
               href="#"
               className="p-2 bg-red-500 rounded-full hover:bg-red-600 transition-colors duration-300"
