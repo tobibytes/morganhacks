@@ -31,7 +31,7 @@ const schedule: ScheduleData = {
       { time: "10:30 AM – 11:30 AM", item: "Opening Ceremony, President Address, Keynote, Panel", responsibility: "All Teams + Guests", venue: "Auditorium: 104" },
       { time: "11:30 AM – 12:15 PM", item: "Hackathon Breakdown & Challenge Statement", responsibility: "All Teams", venue: "Auditorium: 104" },
       { time: "12:30 PM", item: "Coding Begins", venue: "Study Rooms" },
-      { time: "1:00 PM – 2:00 PM", item: "Workshop 1 – Northrop Grumman: A Day in the Life of an Engineer Panel with Yeneneh Ketema", responsibility: "Northrop Grumman", venue: "Room 208" },
+      { time: "1:00 PM – 2:00 PM", item: "Workshop 1 – Northrop Grumman: A Day in the Life of an Engineer Panel with Yeneneh Ketema, MLH Room 112, Room 208", responsibility: "Northrop Grumman", venue: "Room 208" },
       { time: "1:00 PM – 3:00 PM", item: "Lunch Served", responsibility: "Logistics / Volunteers", venue: "First Floor" },
       { time: "4:00 PM – 5:00 PM", item: "Workshop – Northrop Grumman: Building Your Web App with Python, Flask, and NodeJS", responsibility: "Northrop Grumman", venue: "Room 208" },
       { time: "4:00 PM – 5:00 PM", item: "Workshop – Wells Fargo: Speaking with Influence: Crafting a Memorable Pitch", responsibility: "Wells Fargo", venue: "Room 316" },
