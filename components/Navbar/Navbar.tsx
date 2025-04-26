@@ -99,11 +99,6 @@ export default function NavBar({ children }: { children: React.ReactNode }) {
                   Register
                 </div>
               </a>
-              {/* <a href="https://form.jotform.com/251074394248157" target="_blank">
-                <div className="cursor-pointer ml-4 px-6 py-2 rounded-md text-sm font-medium bg-[#60A5FA] text-white transition-all duration-300 hover:bg-blue-600 shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]">
-                  Bus Routes RSVP!
-                </div>
-              </a> */}
             </motion.div>
 
             {/* MLH Badge */}
@@ -128,6 +123,14 @@ export default function NavBar({ children }: { children: React.ReactNode }) {
                 height={90}
               />
             </a>
+              <motion.div variants={linkVariants}>
+                <a href="/map.pdf" target="_blank">
+                  <div className="cursor-pointer ml-4 rounded-md text-sm font-medium bg-[#60A5FA] text-white transition-all duration-300 hover:bg-blue-600 shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]">
+                    See map
+                  </div>
+                </a>
+              </motion.div>
+            
           </div>
 
           <div className="md:hidden">
@@ -142,12 +145,13 @@ export default function NavBar({ children }: { children: React.ReactNode }) {
       </div>
 
       {isOpen && (
+        
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="md:hidden z-50 absolute top-16 left-0 w-full bg-black text-white py-4 px-6 space-y-4 shadow-lg"
-        >
+          >
           {navLinks.map((item) => (
             <div
               key={item.title}
@@ -160,6 +164,9 @@ export default function NavBar({ children }: { children: React.ReactNode }) {
               {item.title}
             </div>
           ))}
+         
+  
+          <motion.div>
           <a
             href="https://www.jotform.com/form/240934884390162"
             target="_blank"
@@ -169,8 +176,17 @@ export default function NavBar({ children }: { children: React.ReactNode }) {
             Register
           </a>
         </motion.div>
-      )}
-
+        <motion.div variants={linkVariants}>
+                <a href="/map.pdf" target="_blank">
+                  <div className="cursor-pointer ml-4 rounded-md text-sm font-medium bg-[#60A5FA] text-white transition-all duration-300 hover:bg-blue-600 shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]">
+                    See map
+                  </div>
+                </a>
+        </motion.div> 
+        </motion.div>
+        )}
+            
+        
 <a
   href="https://form.jotform.com/251074394248157"
   target="_blank"
@@ -183,10 +199,10 @@ export default function NavBar({ children }: { children: React.ReactNode }) {
 </a>
 
 
-      {/* Progress Bar */}
+
       <motion.div className="progress-bar" style={{ scaleX: scrollYProgress }} />
 
-      {/* Page Content */}
+  
       <main className="w-full">
         <AnimatePresence mode="wait">
           <motion.div
